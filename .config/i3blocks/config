@@ -1,0 +1,73 @@
+# i3blocks config file
+#
+# Please see man i3blocks for a complete reference!
+# The man page is also hosted at http://vivien.github.io/i3blocks
+#
+# List of valid properties:
+#
+# align
+# color
+# command
+# full_text
+# instance
+# interval
+# label
+# min_width
+# name
+# separator
+# separator_block_width
+# short_text
+# signal
+# urgent
+separator=false
+separator_block_width=25
+
+markup=pango
+border_top=0
+border_left=0
+border_right=0
+border_bottom=2
+
+[spotify]
+command=~/.config/i3blocks/scripts/spotify/spotify.sh
+interval=2
+border=#41a6b5
+
+[separator]
+
+[sound]
+full_text= 🔇:0% 
+command=~/.config/i3blocks/scripts/sound/sound_info.sh
+interval=0
+signal=1
+border=#db4b4b
+
+[separator]
+
+[bluetooth]
+full_text= disc
+interval=10
+command=~/.config/i3blocks/scripts/bluetooth/bluetooth.sh
+border=#3d59a1
+
+[separator]
+
+[cpu]
+full_text=cpu:00.0°c 
+command=~/.config/i3blocks/scripts/cpu/cpu.sh
+interval=repeat
+border=#9d7cd8
+
+[separator]
+
+[battery]
+command=~/.config/i3blocks/scripts/battery/battery.sh
+interval=2
+border=#9ece6a
+
+[separator]
+
+# Date Time
+[time]
+command=date '+%H:%M on %m/%d'
+interval=5

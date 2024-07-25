@@ -1,18 +1,19 @@
 export PATH=$HOME/.local/bin:$HOME/bin:$PATH
 export EDITOR='/home/aglaia/neovim/build/bin/nvim'
 
-#misc aliases
+# misc aliases
 alias oh='xdg-open .'
 alias edz='nvim ~/.zshrc'
+alias edi3='nvim ~/.config/i3/config'
 
-#git info:
+# git info:
 autoload -Uz vcs_info
 precmd() { vcs_info }
 zstyle ':vcs_info:git:*' formats ' %b'
 
 setopt PROMPT_SUBST
 
-#checks whether the branch is ahead/behind
+# checks whether the branch is ahead/behind
 autoload -U add-zsh-hook
 add-zsh-hook precmd prompt_jnrowe_precmd
 
@@ -30,24 +31,28 @@ prompt_jnrowe_precmd () {
     fi
 }
 
-#prompt
+# prompt
 PROMPT='%F{#73daca}%~%f%F{cyan}${vcs_info_msg_0_}${dir_status}%f'
 
-#otherwise this wont fucking work
+# otherwise this wont fucking work
 export SHELL=/usr/bin/zsh
 
-#history (to save recent commands)
+# history (to save recent commands)
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 setopt appendhistory
 
-#colorful ls with icons
+# colorful ls with icons
 source $(dirname $(gem which colorls))/tab_complete.sh
-alias lsc='colorls -d'
-alias lca='colorls -a'
+alias lsc='colorls -a'
+alias ldc='colorls -d'
 alias ll='colorls -lA --sd'
 
-#autosuggestion
+# autosuggestion
 source ~/.config/zsh/autosuggestions/zsh-autosuggestions.zsh
 alias dotfiles='/usr/bin/git --git-dir=/home/aglaia/dotfiles --work-tree=/home/aglaia'
+
+alias si3='~/scripts/i3_switch.sh'
+
+# plugins: autosuggestions, colorls
