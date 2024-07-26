@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# by me-ish
-
 bluetoothctl show | grep -q "Powered: yes"
 
 if [ $? -eq 0 ]; then
@@ -16,6 +14,7 @@ else
     echo " off"
 fi
 
+# on click
 if [ "${BLOCK_BUTTON}"  ]; then
     blueman-manager
 fi

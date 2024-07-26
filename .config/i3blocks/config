@@ -30,13 +30,13 @@ border_bottom=2
 
 [spotify]
 command=~/.config/i3blocks/scripts/spotify/spotify.sh
-interval=2
+interval=20
 border=#41a6b5
 
 [separator]
 
 [sound]
-full_text= 🔇:0% 
+full_text= 🔇0% 
 command=~/.config/i3blocks/scripts/sound/sound_info.sh
 interval=0
 signal=1
@@ -44,8 +44,15 @@ border=#db4b4b
 
 [separator]
 
+[brightness]
+label=🔆 
+command=~/.config/i3blocks/scripts/brightness/brightness.sh
+interval=once
+signal=13
+border=#ff9e64
+
 [bluetooth]
-full_text= disc
+full_text=
 interval=10
 command=~/.config/i3blocks/scripts/bluetooth/bluetooth.sh
 border=#3d59a1

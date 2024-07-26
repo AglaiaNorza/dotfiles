@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# source: me (it works so i'm fine with it)
-
 input=$(acpi)
 
 # status (charging/discharging)
