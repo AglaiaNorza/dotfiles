@@ -43,12 +43,11 @@ HISTSIZE=10000
 SAVEHIST=10000
 setopt appendhistory
 
-# colorful ls with icons
-source $(dirname $(gem which colorls))/tab_complete.sh
-alias lsc='colorls -a'
-alias ldc='colorls -d'
-alias ll='colorls -lA --sd'
-
+alias ls='eza --icons --color=always'
+alias ll='eza -lhma --git-repos --icons --color=always --group-directories-first'
+alias la='eza -a --icons --color=always --group-directories-first'
+alias l='eza -F --icons --color=always --group-directories-first'
+ 
 # autosuggestion
 source ~/.config/zsh/autosuggestions/zsh-autosuggestions.zsh
 alias dotfiles='/usr/bin/git --git-dir=/home/aglaia/dotfiles --work-tree=/home/aglaia'
