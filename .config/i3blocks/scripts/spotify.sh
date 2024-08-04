@@ -4,9 +4,9 @@
 status=$(~/.local/bin/spotifycli --statusshort)
 
 if [ -n "$status" ]; then
-    echo " $status"
+    echo "$status"
 else
-    echo " silence"
+    echo "silence"
 fi
 
 # if [ "${BLOCK_BUTTON}" ]; then

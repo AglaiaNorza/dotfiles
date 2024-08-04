@@ -27,7 +27,6 @@ border_top=0
 border_left=0
 border_right=0
 border_bottom=2
-border=#2B364D
 # $SCRIPTS is defined in i3 config
 command=$SCRIPTS/$BLOCK_NAME.sh
 
@@ -35,69 +34,76 @@ command=$SCRIPTS/$BLOCK_NAME.sh
 full_text=  
 command=
 interval=once
-background=#2B364D
+background=#378c99
 
 [spotify]
 interval=3
 signal=2
+border=#378c99
 
 [soundicon]
 full_text= 
 signal=1
 interval=once
-background=#2B364D
+background=#B63A50
 
 [soundnoemoji]
 full_text=0% 
 interval=once
 signal=1
+border=#B63A50
 
 [icon]
 full_text=  
 command=
 interval=once
-background=#2B364D
+background=#bd632f
 
 [brightness]
 interval=once
 signal=13
+border=#bd632f
 
 [icon]
 full_text=  
 command=
 interval=once
-background=#2B364D
+background=#775C83
 
 [cpu]
 full_text=00.0°c 
 interval=repeat
+border=#775C83
 
 [batteryicon]
 full_text= 󰂄 
 interval=10
-background=#2B364D
+background=#679388
 
 [batterynoemoji]
 interval=10
+border=#679388
 
 [icon]
 full_text= 󰃭 
 command=
 interval=once
-background=#2B364D
+background=#2E5978
 
 # Date Time
 [time]
 command=date '+%d-%m'
+border=#2E5978
 interval=5
 
 [icon]
 full_text=  
 command=
 interval=once
-background=#2B364D
+background=#565f89
 
 # Date Time
 [date]
 command=date '+%H:%M'
+border=#565f89
 interval=5

@@ -22,82 +22,75 @@
 
 color=#d9dff9
 separator=false
-#separator_block_width=25
+separator_block_width=25
 border_top=0
 border_left=0
 border_right=0
 border_bottom=2
-border=#2B364D
 # $SCRIPTS is defined in i3 config
 command=$SCRIPTS/$BLOCK_NAME.sh
 
-[icon]
-full_text=  
-command=
-interval=once
-background=#2B364D
-
 [spotify]
+label= 
+#command=$SCRIPTS/spotify.sh
 interval=3
 signal=2
+border=#41a6b5
 
-[soundicon]
-full_text= 
-signal=1
-interval=once
-background=#2B364D
+[separator]
 
-[soundnoemoji]
-full_text=0% 
+[sound]
+full_text=🔇0% 
+#command=$SCRIPTS/sound.sh
 interval=once
 signal=1
+border=#db4b4b
 
-[icon]
-full_text=  
-command=
-interval=once
-background=#2B364D
+[separator]
 
 [brightness]
+label=🔆
+#command=$SCRIPTS/brightness.sh
 interval=once
 signal=13
+border=#ff9e64
 
-[icon]
-full_text=  
-command=
-interval=once
-background=#2B364D
+#[bluetooth]
+#full_text=
+#interval=10
+#command=$SCRIPTS/bluetooth.sh
+#border=#3d59a1
+
+[separator]
 
 [cpu]
+label=🧊
 full_text=00.0°c 
+#command=$SCRIPTS/cpu.sh
 interval=repeat
+border=#9d7cd8
 
-[batteryicon]
-full_text= 󰂄 
+[separator]
+
+[battery]
+#command=$SCRIPTS/battery.sh
 interval=10
-background=#2B364D
+border=#9ece6a
 
-[batterynoemoji]
-interval=10
-
-[icon]
-full_text= 󰃭 
-command=
-interval=once
-background=#2B364D
+[separator]
 
 # Date Time
 [time]
+label=󰃭 
 command=date '+%d-%m'
+border=#3d59a1
 interval=5
 
-[icon]
-full_text=  
-command=
-interval=once
-background=#2B364D
 
 # Date Time
 [date]
+label= 
+#command==~/.config/i3blocks/scripts/date/date.sh
 command=date '+%H:%M'
+border=#565f89
 interval=5
