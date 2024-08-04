@@ -5,6 +5,7 @@ export EDITOR='/home/aglaia/neovim/build/bin/nvim'
 alias oh='xdg-open .'
 alias edz='nvim ~/.zshrc'
 alias edi3='nvim ~/.config/i3/config'
+alias bar=~/scripts/switchbar.sh
 
 # git info:
 autoload -Uz vcs_info

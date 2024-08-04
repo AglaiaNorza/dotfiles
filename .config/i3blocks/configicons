@@ -1,3 +1,4 @@
+#configicons
 # i3blocks config file
 #
 # Please see man i3blocks for a complete reference!
@@ -41,6 +42,17 @@ interval=3
 signal=2
 border=#378c99
 
+[icon]
+full_text= 󰌓 
+command=
+interval=once
+background=#775C83
+
+[keyboard]
+interval=once
+signal=3
+border=#775C83
+
 [soundicon]
 full_text= 
 signal=1
@@ -68,12 +80,12 @@ border=#bd632f
 full_text=  
 command=
 interval=once
-background=#775C83
+background=#98556D
 
 [cpu]
 full_text=00.0°c 
 interval=repeat
-border=#775C83
+border=#98556D
 
 [batteryicon]
 full_text= 󰂄 
