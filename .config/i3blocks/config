@@ -41,6 +41,16 @@ background=#2B364D
 interval=3
 signal=2
 
+[icon]
+full_text= 󰌓 
+command=
+interval=once
+background=#2B364D
+
+[keyboard]
+interval=once
+signal=3
+
 [soundicon]
 full_text= 
 signal=1

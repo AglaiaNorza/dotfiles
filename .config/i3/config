@@ -214,7 +214,7 @@ bar {
     
     colors {
         background #14151E 
-        statusline #FFFFFF
+    
         separator  #666666
 
         # class             border  bground  text
@@ -232,6 +232,7 @@ bar {
 # lock
 bindsym --release $mod+Shift+x exec slock
 
+# gaps are cringe i am well aware
 # Set gaps
 gaps inner 10
 gaps outer -10
@@ -248,8 +249,13 @@ bindsym XF86LaunchA exec --no-startup-id maim "/home/aglaia/Pictures/Screenshots
 
 bindsym XF86LaunchB exec --no-startup-id maim --select "/home/aglaia/Pictures/Screenshots/$(date '+%d-%m - %H:%M').png"
 
+# change keyboard layout (and its i3block)
+bindsym Mod4+space exec setxkbmap -layout us && pkill -RTMIN+3 i3blocks
+bindsym Mod4+Shift+space exec setxkbmap -layout it && pkill -RTMIN+3 i3blocks
+
 # open terminal when a session starts
 exec konsole
 
 # wallpaper
 exec_always feh --bg-scale ~/Pictures/backgrounds/tech.png
+exec setxkbmap -layout us
