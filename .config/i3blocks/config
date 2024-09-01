@@ -33,7 +33,7 @@ border=#2B364D
 command=$SCRIPTS/$BLOCK_NAME.sh
 
 [icon]
-full_text=  
+full_text= 󰝚 
 command=
 interval=once
 background=#2B364D
@@ -63,9 +63,9 @@ full_text=0%
 interval=once
 signal=1
 
-[icon]
-full_text=  
-command=
+[brightnessicon]
+#full_text=  
+#command=
 interval=once
 background=#2B364D
 
@@ -84,7 +84,7 @@ full_text=00.0°c
 interval=repeat
 
 [batteryicon]
-full_text= 󰂄 
+#full_text= 󰂄 
 interval=10
 background=#2B364D
 
@@ -103,7 +103,7 @@ command=date '+%d-%m'
 interval=5
 
 [icon]
-full_text=  
+full_text= 󰦖 
 command=
 interval=once
 background=#2B364D

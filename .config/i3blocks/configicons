@@ -32,7 +32,7 @@ border_bottom=2
 command=$SCRIPTS/$BLOCK_NAME.sh
 
 [icon]
-full_text=  
+full_text= 󰝚 
 command=
 interval=once
 background=#378c99
@@ -65,9 +65,9 @@ interval=once
 signal=1
 border=#B63A50
 
-[icon]
-full_text=  
-command=
+[brightnessicon]
+#full_text=  
+#command=
 interval=once
 background=#bd632f
 
@@ -88,7 +88,7 @@ interval=repeat
 border=#98556D
 
 [batteryicon]
-full_text= 󰂄 
+#full_text= 󰂄 
 interval=10
 background=#679388
 
@@ -109,7 +109,7 @@ border=#2E5978
 interval=5
 
 [icon]
-full_text=  
+full_text= 󰦖 
 command=
 interval=once
 background=#565f89

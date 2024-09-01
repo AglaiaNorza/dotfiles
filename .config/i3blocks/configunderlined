@@ -32,7 +32,7 @@ border_bottom=2
 command=$SCRIPTS/$BLOCK_NAME.sh
 
 [spotify]
-label= 
+label= 󰝚 
 #command=$SCRIPTS/spotify.sh
 interval=3
 signal=2
@@ -90,7 +90,7 @@ interval=5
 
 # Date Time
 [date]
-label= 
+label=󰦖 
 #command==~/.config/i3blocks/scripts/date/date.sh
 command=date '+%H:%M'
 border=#565f89

@@ -53,4 +53,4 @@ alias l='eza -F --icons --color=always --group-directories-first'
 source ~/.config/zsh/autosuggestions/zsh-autosuggestions.zsh
 alias dotfiles='/usr/bin/git --git-dir=/home/aglaia/dotfiles --work-tree=/home/aglaia'
 
-# plugins: autosuggestions, colorls
+# plugins: autosuggestions, eza

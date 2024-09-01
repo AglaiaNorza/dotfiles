@@ -217,7 +217,7 @@ bar {
     
         separator  #666666
 
-        # class             border  bground  text
+        # class            flatpak install discord border  bground  text
         focused_workspace  $darkg  $darkg  $offwhite
         inactive_workspace #16161d  #16161d $offwhite
         active_workspace   #3C6EB4  #294172 $offwhite

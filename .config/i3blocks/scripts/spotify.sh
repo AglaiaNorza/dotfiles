@@ -9,5 +9,6 @@ else
     echo "silence"
 fi
 
-# if [ "${BLOCK_BUTTON}" ]; then
-
+if [ "${BLOCK_BUTTON}" ]; then
+    flatpak run com.spotify.Client
+fi
