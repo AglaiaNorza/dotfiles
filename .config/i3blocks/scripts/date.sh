@@ -1,7 +1,7 @@
 #!/bin/bash
 
-echo $date '+%H:%M'
+date +%d-%m
 
 if [ "${BLOCK_BUTTON}" ]; then
-    konsole -e cal
+    konsole -e sh -c "cal -3; read -p 'press enter to close...' "
 fi

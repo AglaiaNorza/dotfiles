@@ -1,6 +1,6 @@
-xbacklight > /dev/null
+backlight > /dev/null
 
 # on PC, it won't output
 if [ $? -eq 0 ]; then
-    echo " b "
+    echo "  "
 fi

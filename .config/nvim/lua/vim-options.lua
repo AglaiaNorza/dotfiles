@@ -16,3 +16,4 @@ vim.opt.incsearch = true --highlighting for searches
 vim.opt.termguicolors = true
 
 vim.opt.scrolloff = 8 --never has less than 8 lines before end of page
+

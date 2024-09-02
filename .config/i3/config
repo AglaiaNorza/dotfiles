@@ -92,6 +92,7 @@ bindsym $mod+Shift+q kill
 # A more modern dmenu replacement is rofi:
 # bindsym $mod+d exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
+#label=TEMP
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
  bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
@@ -192,7 +193,7 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # automatically opens firefox on the second workspace
 # (to get the class, run xprop on the terminal and click on the window you need)
- assign [class = "firefox"] $ws2
+ assign [class=firefox] $ws2
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -233,11 +234,12 @@ bar {
 bindsym --release $mod+Shift+x exec slock
 
 # gaps are cringe i am well aware
-# Set gaps
 gaps inner 10
 gaps outer -10
 
 smart_gaps off
+
+for_window [class=konsole|firefox|discord] border pixel 0
 
 bindsym $mod+Shift+minus gaps inner all minus 10
 #bindsym $mod+Shift+minus gaps outer current minus 5
@@ -256,6 +258,9 @@ bindsym Mod4+Shift+space exec setxkbmap -layout it && pkill -RTMIN+3 i3blocks
 # open terminal when a session starts
 exec konsole
 
-# wallpaper
-exec_always feh --bg-scale ~/Pictures/backgrounds/tech.png
+# fix for messed up pc dpi :D
+exec_always xrandr --output eDP1 --scale 0.8x0.8
+exec_always i3 gaps inner all minus 10
+
+exec_always feh --bg-scale ~/Pictures/backgrounds/current.png
 exec setxkbmap -layout us

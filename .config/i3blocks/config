@@ -76,7 +76,7 @@ signal=13
 [icon]
 full_text=  
 command=
-interval=once
+interval=once:Q
 background=#2B364D
 
 [cpu]
@@ -98,8 +98,8 @@ interval=once
 background=#2B364D
 
 # Date Time
-[time]
-command=date '+%d-%m'
+[date]
+#command=date '+%d-%m'
 interval=5
 
 [icon]
@@ -109,6 +109,6 @@ interval=once
 background=#2B364D
 
 # Date Time
-[date]
+[time]
 command=date '+%H:%M'
 interval=5
