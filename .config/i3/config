@@ -114,11 +114,11 @@ bindsym $mod+Shift+$down move down
 bindsym $mod+Shift+$up move up
 bindsym $mod+Shift+$right move right
 
-# alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
+# arrow keys change monitors
+bindsym $mod+Shift+Left move workspace to output left
+bindsym $mod+Shift+Right move workspace to output right
+# bindsym $mod+Shift+Down move down
+# bindsym $mod+Shift+Up move up
 
 # split in horizontal orientation
 bindsym $mod+c split h
@@ -260,6 +260,8 @@ exec konsole
 
 # fix for messed up pc dpi :D
 exec_always xrandr --output eDP1 --scale 0.8x0.8
+# my PC two-monitor setup
+exec_always xrandr --output HDMI-A-1 --auto --left-of HDMI-A-0 
 exec_always i3 gaps inner all minus 10
 
 exec_always feh --bg-scale ~/Pictures/backgrounds/current.png
