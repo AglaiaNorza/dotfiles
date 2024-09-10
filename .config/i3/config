@@ -22,6 +22,9 @@ font pango: CascadiaCode 14
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex-autostart --autostart --environment i3
 
+# transparency isnt that bad ig
+exec --no-startup-id picom -b
+
 # class                 border  bground  text   indicator child_border
 
 client.focused           $darkg $blueg   $offwhite $darkg  $darkg
@@ -80,7 +83,7 @@ set $right l
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec konsole
+bindsym $mod+Return exec alacritty
 # start firefox
 bindsym $mod+Shift+f exec firefox
 
@@ -256,12 +259,12 @@ bindsym Mod4+space exec setxkbmap -layout us && pkill -RTMIN+3 i3blocks
 bindsym Mod4+Shift+space exec setxkbmap -layout it && pkill -RTMIN+3 i3blocks
 
 # open terminal when a session starts
-exec konsole
+exec alacritty
 
 # fix for messed up pc dpi :D
 exec_always xrandr --output eDP1 --scale 0.8x0.8
 # my PC two-monitor setup
-exec_always xrandr --output HDMI-A-1 --auto --left-of HDMI-A-0 
+exec_always xrandr --output HDMI-2 --auto --left-of HDMI-1 
 exec_always i3 gaps inner all minus 10
 
 exec_always feh --bg-scale ~/Pictures/backgrounds/current.png
