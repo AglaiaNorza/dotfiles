@@ -51,6 +51,9 @@ alias l='eza -F --icons --color=always --group-directories-first'
  
 # autosuggestion
 source ~/.config/zsh/autosuggestions/zsh-autosuggestions.zsh
+
+source ~/.config/zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+
 alias dotfiles='/usr/bin/git --git-dir=/home/aglaia/dotfiles --work-tree=/home/aglaia'
 
-# plugins: autosuggestions, eza
+# plugins: autosuggestions, autocomplete, eza
