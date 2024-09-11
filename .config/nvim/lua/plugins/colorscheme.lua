@@ -1,3 +1,4 @@
+--tokyonight
 return {
 	"folke/tokyonight.nvim",
 	lazy = false,
@@ -7,12 +8,3 @@ return {
 		vim.cmd.colorscheme "tokyonight-night" 
 	end
 }
-
-
-
-
-
-
-
-
-

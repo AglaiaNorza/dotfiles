@@ -7,7 +7,7 @@
 #echo "$TEMP" | awk '{ printf("%.0f°C\n"), $1}'
 
 # differentiate between my pc and my laptop
-if [[ "$HOSTNAME" == "desktop-di-aglaia" ]]; then 
+if [[ "$HOSTNAME" == "archglaia" ]]; then 
     TEMP=$(sensors | grep 'Tctl' | grep ':[ ]*+[0-9]*.[0-9]*°C' -o | grep '+[0-9]*.[0-9]*°C' -o)
 
 else 

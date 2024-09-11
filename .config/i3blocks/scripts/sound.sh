@@ -1,16 +1,15 @@
 #!/bin/sh
 
-# source: https://github.com/miklhh/i3blocks-config/blob/master/.config/i3blocks/sound/sound_info.sh
-
+# had an old one with amixer and awk and stuff but i had issues with my audio sources on my pc so this uses pamixer instead
 VOLUME_MUTE="🔇"
 VOLUME_LOW="🔈"
 VOLUME_MID="🔉"
 VOLUME_HIGH="🔊"
-SOUND_LEVEL=$(amixer -M get Master | awk -F"[][]" '/%/ { print $2 }' | awk -F"%" 'BEGIN{tot=0; i=0} {i++; tot+=$1} END{printf("%s\n", tot/i) }')
-MUTED=$(amixer get Master | awk ' /%/{print ($NF=="[off]" ? 1 : 0); exit;}')
+
+SOUND_LEVEL=$(pamixer --get-volume)
 
 ICON=$VOLUME_MUTE
-if [ "$MUTED" = "1" ]
+if [ "$(pamixer --get-mute)" = "true" ]
 then
     ICON="$VOLUME_MUTE"
 else

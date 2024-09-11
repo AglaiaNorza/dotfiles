@@ -1,11 +1,11 @@
-export PATH=$HOME/.local/bin:$HOME/bin:$PATH
+export PATH=$HOME/.local/bin:$HOME/bin:$HOME/.cargo/bin:$PATH
 export EDITOR='/home/aglaia/neovim/build/bin/nvim'
 
 # misc aliases
-alias oh='xdg-open .'
 alias edz='nvim ~/.zshrc'
 alias edi3='nvim ~/.config/i3/config'
 alias bar=~/scripts/switchbar.sh
+alias theme=~/scripts/themechange.sh
 
 # git info:
 autoload -Uz vcs_info

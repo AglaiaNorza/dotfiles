@@ -1,11 +1,9 @@
 #!/bin/sh
 
-# source: a part of https://github.com/miklhh/i3blocks-config/blob/master/.config/i3blocks/sound/sound_info.sh
-
-MUTED=$(amixer get Master | awk ' /%/{print ($NF=="[off]" ? 1 : 0); exit;}')
+# used to use amixer and awk, but i had issues with audio sources on my pc, so pamixer it is
 
 ICON="  "
-if [ "$MUTED" = "1" ]
+if [ "$(pamixer --get-mute)" = "true" ]
 then
     ICON=" 󰸈 "
 fi

@@ -1,0 +1,13 @@
+# nord
+
+set $offwhite #c0caf5
+set $bar_bg #2e3440
+set $separator #666666
+set $focused #4c566a
+set $inactive #3b4253
+set $active #434c5e
+set $urgent #5e81ac
+set $urgent2 #81a1c1
+set $bmode #A07CBC
+
+#endcolors

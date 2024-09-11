@@ -1,26 +1,3 @@
-#configunderlined
-# i3blocks config file
-#
-# Please see man i3blocks for a complete reference!
-# The man page is also hosted at http://vivien.github.io/i3blocks
-#
-# List of valid properties:
-#
-# align
-# color
-# command
-# full_text
-# instance
-# interval
-# label
-# min_width
-# name
-# separator
-# separator_block_width
-# short_text
-# signal
-# urgent
-
 color=#d9dff9
 separator=false
 separator_block_width=25
@@ -68,7 +45,7 @@ border=#ff9e64
 label=🧊
 full_text=00.0°c 
 #command=$SCRIPTS/cpu.sh
-interval=repeat
+interval=20
 border=#9d7cd8
 
 [separator]

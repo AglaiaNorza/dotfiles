@@ -1,0 +1,13 @@
+# rosepine
+
+set $offwhite #e0def4
+set $bar_bg #1f1d2e
+set $separator #666666
+set $focused #8f4d5e
+set $inactive #403d52
+set $active #393552
+set $urgent #eb6f92
+set $urgent2 #eb6f92
+set $bmode #A07CBC
+
+#endcolors
