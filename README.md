@@ -1,4 +1,4 @@
-slowly building something i like (and learning so much from it!!!)
+slowly building something i like (and learning so much from it!!!) (i know very little but i love learning/knowledge in general !)
 
 my favourite out of the i3blocks configs i did:
 ![mono](res/monobar.png)
@@ -9,4 +9,5 @@ another (less depressing) one:
 an old one i don't really like:
 ![underlined](res/underlinedbar.png)
 
-https://github.com/user-attachments/assets/c317413b-0ff5-402c-9248-9f8ccf797b04
+(i really have nothing to do):
+https://github.com/user-attachments/assets/38080900-d7d3-4f79-a99f-0426eea61dad
