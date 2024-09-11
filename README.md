@@ -9,5 +9,4 @@ another (less depressing) one:
 an old one i don't really like:
 ![underlined](res/underlinedbar.png)
 
-i really have nothing to do:
-![theme switch](res/themes.mp4)
+https://github.com/user-attachments/assets/c317413b-0ff5-402c-9248-9f8ccf797b04
