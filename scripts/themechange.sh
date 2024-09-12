@@ -13,22 +13,27 @@ case $input in
     "1")
         new="tokyonight"
         i3barc="#2b364d"
+        i3txt="#d9dff9"
         ;;
     "2")
         new="gruvbox"
         i3barc="#32302f"
+        i3txt="#a89984"
         ;;
     "3")
         new="gruvboxmaterial"
         i3barc="#32302f"
+        i3txt="#d4be98"
         ;;
     "4")
         new="rosepine"
         i3barc="#393552"
+        i3txt="e0def4"
         ;;
     "5")
         new="nord"
         i3barc="#3d4a54"
+        i3txt="#d9dff9"
         ;;
 esac
 
@@ -78,6 +83,7 @@ cat $colors $i3config > temp.txt && mv temp.txt $i3config
 
 sed -i -e "s/background=#.*/background=$i3barc/" \
     -e "s/border=#.*/border=$i3barc/" \
+    -e "s/color=#.*/color=$i3txt/" \
     "$HOME/.config/i3blocks/config" 
 
 mv "$HOME/Pictures/backgrounds/current.png" "$HOME/Pictures/backgrounds/$old.png"
@@ -87,3 +93,8 @@ if [[ "$XDG_SESSION_DESKTOP" == "i3" ]]; then
     #reload to see the bar
     i3 restart
 fi
+
+# ------- keyboard rgb -------
+
+# uses https://github.com/dokutan/rgb_keyboard
+sudo rgb_keyboard --custom-pattern "$HOME/.config/keyboard/$new.conf"

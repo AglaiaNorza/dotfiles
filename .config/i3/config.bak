@@ -1,13 +1,13 @@
-# rosepine
+# gruvbox
 
-set $offwhite #e0def4
-set $bar_bg #1f1d2e
+set $offwhite #a89984
+set $bar_bg #1d1e1f
 set $separator #666666
-set $focused #8f4d5e
-set $inactive #403d52
-set $active #393552
-set $urgent #eb6f92
-set $urgent2 #eb6f92
+set $focused #504945
+set $inactive #3c3836
+set $active #282828
+set $urgent #9d0006
+set $urgent2 #cc241d
 set $bmode #A07CBC
 
 #endcolors
