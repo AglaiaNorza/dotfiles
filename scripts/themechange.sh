@@ -8,32 +8,38 @@ fi
 
 new=""
 i3barc=""
+obtheme=""
 
 case $input in 
     "1")
         new="tokyonight"
         i3barc="#2b364d"
         i3txt="#d9dff9"
+        obtheme="Tokyo Night"
         ;;
     "2")
         new="gruvbox"
         i3barc="#32302f"
         i3txt="#a89984"
+        obtheme="Obsidian gruvbox"
         ;;
     "3")
         new="gruvboxmaterial"
         i3barc="#32302f"
         i3txt="#d4be98"
+        obtheme="Material Gruvbox"
         ;;
     "4")
         new="rosepine"
         i3barc="#393552"
         i3txt="e0def4"
+        obtheme="Rosé Pine"
         ;;
     "5")
         new="nord"
         i3barc="#3d4a54"
         i3txt="#d9dff9"
+        obtheme="Obsidian Nord"
         ;;
 esac
 
@@ -71,6 +77,7 @@ colors="$HOME/.config/i3/colors/colors.txt"
 i3config="$HOME/.config/i3/config"
 
 cp $i3config "$i3config.bak"
+(most of the plugins required for these to work are listed in the respective files, but i might have forgotten some)
 
 oldcolors=$(grep '^# ' "$colors" | awk '{print $2}').txt
 
@@ -98,3 +105,7 @@ fi
 
 # uses https://github.com/dokutan/rgb_keyboard
 sudo rgb_keyboard --custom-pattern "$HOME/.config/keyboard/$new.conf"
+
+# ------- obsidian -------
+sed -i -e "s/\"cssTheme\".*/\"cssTheme\": \"$obtheme\"/" "$HOME/Documents/uni/obsidian-vault/.obsidian/appearance.json"
+
