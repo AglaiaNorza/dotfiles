@@ -1,13 +1,13 @@
-# gruvbox
+# nord
 
-set $offwhite #a89984
-set $bar_bg #1d1e1f
+set $offwhite #c0caf5
+set $bar_bg #2e3440
 set $separator #666666
-set $focused #504945
-set $inactive #3c3836
-set $active #282828
-set $urgent #9d0006
-set $urgent2 #cc241d
+set $focused #4c566a
+set $inactive #3b4253
+set $active #434c5e
+set $urgent #5e81ac
+set $urgent2 #81a1c1
 set $bmode #A07CBC
 
 #endcolors
@@ -101,7 +101,7 @@ bindsym $mod+Shift+q kill
 # There also is i3-dmenu-desktop which only displays applications shipping a
 #label=TEMP
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
- bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+ bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu "dmenu -fn CascadiaCode:pixelsize=17 -nb $bar_bg -nf $offwhite -sb $focused -sf $offwhite"
 
 # change focus
 bindsym $mod+$left focus left
@@ -207,7 +207,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'you pressed the exit shortcut. do you really want to exit i3?' -B 'yes, exit i3' 'i3-msg exit'"
 
 # Pressing mod+win+direction will resize the window in that direction
 bindsym $mod+Mod4+$left       resize shrink width 10 px or 10 ppt
