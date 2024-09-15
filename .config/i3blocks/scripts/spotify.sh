@@ -1,14 +1,10 @@
 #!/bin/bash
 
-# did not work without specific path for some reason !
-status=$(~/.local/bin/spotifycli --statusshort)
+track=$(playerctl metadata title)
+artist=$(playerctl metadata artist)
 
-if [ -n "$status" ]; then
-    echo "$status"
-else
+if [ $? -ne 0 ]; then
     echo "silence"
-fi
-
-if [ "${BLOCK_BUTTON}" ]; then
-    flatpak run com.spotify.Client
+else
+    echo "$track - $artist"
 fi

@@ -1,3 +1,4 @@
+#configmono
 color=#d9dff9
 separator=false
 #separator_block_width=25
@@ -49,6 +50,13 @@ background=#2B364D
 [brightness]
 interval=once
 signal=13
+
+[bluetoothicon]
+interval=once
+background=#2B364D
+
+[bluetooth]
+interval=10
 
 [icon]
 full_text=  

@@ -32,7 +32,7 @@ case $input in
     "4")
         new="rosepine"
         i3barc="#393552"
-        i3txt="e0def4"
+        i3txt="#e0def4"
         obtheme="Rosé Pine"
         ;;
     "5")

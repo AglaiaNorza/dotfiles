@@ -1,0 +1,5 @@
+battery: acpi
+bluetooth: bluetoothctl + bluetoothctl-utils
+brightness: xbacklight
+sound: pamixer (amixer didn't work on my PC)
+spotify: playerctl

@@ -1,17 +1,21 @@
 #!/bin/bash
 
+if [[ "$HOSTNAME" == "archglaia-otg" ]]; then
+    exit 0
+fi
+
 bluetoothctl show | grep -q "Powered: yes"
 
 if [ $? -eq 0 ]; then
     connected_devices=$(bluetoothctl info | grep "Connected: yes" | wc -l)
 
     if [ $connected_devices -gt 0 ]; then
-        echo " con"
+        echo "con"
     else
-        echo " disc"
+        echo "disc"
     fi
 else
-    echo " off"
+    echo "off"
 fi
 
 # on click
