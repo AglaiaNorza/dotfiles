@@ -9,9 +9,9 @@ border_bottom=2
 # $SCRIPTS is defined in i3 config
 command=$SCRIPTS/$BLOCK_NAME.sh
 
-[spotify]
+[media]
 label= 󰝚 
-#command=$SCRIPTS/spotify.sh
+#command=$SCRIPTS/media.sh
 interval=3
 signal=2
 border=#41a6b5

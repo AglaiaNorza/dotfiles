@@ -15,7 +15,7 @@ command=
 interval=once
 background=#378c99
 
-[spotify]
+[media]
 interval=3
 signal=2
 border=#378c99
