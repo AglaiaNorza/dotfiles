@@ -9,6 +9,7 @@ fi
 new=""
 i3barc=""
 obtheme=""
+spotheme=""
 
 case $input in 
     "1")
@@ -16,30 +17,35 @@ case $input in
         i3barc="#2b364d"
         i3txt="#d9dff9"
         obtheme="Tokyo Night"
+        spotheme="catpuccin-macchiato"
         ;;
     "2")
         new="gruvbox"
         i3barc="#32302f"
         i3txt="#a89984"
         obtheme="Obsidian gruvbox"
+        spotheme="gruvbox-material-dark"
         ;;
     "3")
         new="gruvboxmaterial"
         i3barc="#32302f"
         i3txt="#d4be98"
         obtheme="Material Gruvbox"
+        spotheme="gruvbox-material-dark"
         ;;
     "4")
         new="rosepine"
         i3barc="#393552"
         i3txt="#e0def4"
         obtheme="Rosé Pine"
+        spotheme="rosepine"
         ;;
     "5")
         new="nord"
         i3barc="#3d4a54"
         i3txt="#d9dff9"
         obtheme="Obsidian Nord"
+        spotheme="nord-dark"
         ;;
 esac
 
@@ -109,3 +115,6 @@ sudo rgb_keyboard --custom-pattern "$HOME/.config/keyboard/$new.conf"
 # ------- obsidian -------
 sed -i -e "s/\"cssTheme\".*/\"cssTheme\": \"$obtheme\"/" "$HOME/Documents/uni/obsidian-vault/.obsidian/appearance.json"
 
+# ------- spicetify (Dribbblish) ------- 
+spicetify config color_scheme "$spotheme"
+spicetify apply
