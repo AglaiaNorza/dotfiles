@@ -2,12 +2,12 @@
 
 # quickly moves files to the attachment directory of my obsidian vault (and renames them)
 
+input="$1"
+
 if [ -z "$input" ] && [ -z "$2" ]; then
     echo "usage: $0 <new_file_name> [directory_name]"
     exit 1
 fi
-
-input="$1"
 
 if [ -z "$input" ]; then
     read -e -p \ 
