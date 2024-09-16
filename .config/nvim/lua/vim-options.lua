@@ -1,5 +1,6 @@
 vim.g.mapleader = ","
-
+vim.keymap.set('n', '<C-u>', '<C-u>zz', { noremap = true })
+vim.keymap.set('n', '<C-d>', '<C-d>zz', { noremap = true })
 --line numbers
 vim.opt.nu = true
 vim.opt.relativenumber = true
@@ -16,4 +17,3 @@ vim.opt.incsearch = true --highlighting for searches
 vim.opt.termguicolors = true
 
 vim.opt.scrolloff = 8 --never has less than 8 lines before end of page
-

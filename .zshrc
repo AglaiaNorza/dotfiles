@@ -1,13 +1,16 @@
-export PATH=$HOME/.local/bin:$HOME/bin:$HOME/.cargo/bin:$PATH
-export EDITOR='/home/aglaia/neovim/build/bin/nvim'
+export PATH=$HOME/.local/bin:$HOME/bin:$HOME/.cargo/bin:$HOME/.spicetify:$PATH
+export EDITOR=$(which nvim)
 
-# misc aliases
+# ------- misc aliases -------
+alias dotfiles='/usr/bin/git --git-dir=/home/aglaia/dotfiles --work-tree=/home/aglaia'
 alias edz='nvim ~/.zshrc'
 alias edi3='nvim ~/.config/i3/config'
 alias bar=~/scripts/switchbar.sh
 alias theme=~/scripts/themechange.sh
+alias obsi=~/scripts/obsidianise.sh
+alias addall='cd -- && cd .config && dotfiles add alacritty i3 i3blocks keyboard nvim && cd -- && dotfiles add scripts res .zshrc README.md'
 
-# git info:
+# ------- git info: -------
 autoload -Uz vcs_info
 precmd() { vcs_info }
 zstyle ':vcs_info:git:*' formats ' %b'
@@ -18,6 +21,7 @@ setopt PROMPT_SUBST
 autoload -U add-zsh-hook
 add-zsh-hook precmd prompt_jnrowe_precmd
 
+# got this function from https://github.com/ohmyzsh/ohmyzsh/blob/master/themes/jnrowe.zsh-theme
 prompt_jnrowe_precmd () {
     vcs_info
 
@@ -32,28 +36,35 @@ prompt_jnrowe_precmd () {
     fi
 }
 
-# prompt
+# ------- prompt: -------
 PROMPT='%F{#73daca}%~%f%F{cyan}${vcs_info_msg_0_}${dir_status}%f'
 
 # otherwise this wont fucking work
 export SHELL=/usr/bin/zsh
 
-# history (to save recent commands)
+# ------- history -------
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 setopt appendhistory
 
+# ------- eza (ls alternative) -------
 alias ls='eza --icons --color=always'
 alias ll='eza -lhma --git-repos --icons --color=always --group-directories-first'
 alias la='eza -a --icons --color=always --group-directories-first'
 alias l='eza -F --icons --color=always --group-directories-first'
  
-# autosuggestion
+# ------- autosuggestions -------
 source ~/.config/zsh/autosuggestions/zsh-autosuggestions.zsh
 
 source ~/.config/zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
-alias dotfiles='/usr/bin/git --git-dir=/home/aglaia/dotfiles --work-tree=/home/aglaia'
+# for autocomplete
+bindkey -M menuselect  '^[[D' .backward-char  '^[OD' .backward-char
+bindkey -M menuselect  '^[[C'  .forward-char  '^[OC'  .forward-char
+bindkey              '^I'         menu-complete
 
+# ------- vim-like -------
+bindkey -v
+export KEYTIMEOUT=1
 # plugins: autosuggestions, autocomplete, eza

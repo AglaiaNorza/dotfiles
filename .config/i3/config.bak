@@ -1,13 +1,13 @@
-# nord
+# gruvbox
 
-set $offwhite #c0caf5
-set $bar_bg #2e3440
+set $offwhite #a89984
+set $bar_bg #1d1e1f
 set $separator #666666
-set $focused #4c566a
-set $inactive #3b4253
-set $active #434c5e
-set $urgent #5e81ac
-set $urgent2 #81a1c1
+set $focused #504945
+set $inactive #3c3836
+set $active #282828
+set $urgent #9d0006
+set $urgent2 #cc241d
 set $bmode #A07CBC
 
 #endcolors
