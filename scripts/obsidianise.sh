@@ -4,21 +4,24 @@
 
 input="$1"
 
+YELLOW='\033[0;33m'
+BLUE='\033[0;34m'
+NC='\033[0m'
+
 if [ -z "$input" ] && [ -z "$2" ]; then
-    echo "usage: $0 <new_file_name> [directory_name]"
+    echo -e "quickly move files to the attachment directory of my obsidian vault!\nusage: ${BLUE}$0 <new_file_name> ${YELLOW}[directory_name]"
     exit 1
 fi
 
-if [ -z "$input" ]; then
-    read -e -p \ 
-        "insert the new name for the file (no extension): " input
-fi
-
 if [ -z "$2"  ]; then
-    location="$HOME/Downloads"
+    location="$HOME/Pictures/Screenshots"
 else
-    if [ -d "$HOME/$2" ]; then
+    if [ "$2" = "d" ]; then
+        location="$HOME/Downloads"
+    
+    elif [ -d "$HOME/$2" ]; then
         location="$HOME/$2"
+    
     else
         echo "not a directory"
         exit 1

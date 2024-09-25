@@ -1,9 +1,12 @@
 #!/bin/bash
 
 input="$1"
+YELLOW='\033[0;33m'
+NC='\033[0m'
 
 if [ -z "$input" ]; then
         # which bar do i want to change to
+    echo -e "${YELLOW}choose a bar by entering the corresponding number${NC}"
     read -e -p "monobar(1), iconbar(2), underlinedbar(3): " input
 fi
 

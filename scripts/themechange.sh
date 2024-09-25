@@ -2,7 +2,11 @@
 
 input="$1"
 
+YELLOW='\033[0;33m'
+NC='\033[0m'
+
 if [ -z "$input" ]; then
+    echo -e "${YELLOW}change the system theme by moving some files around !\nchoose a theme by selecting a number${NC}"
     read -e -p "tokyonight(1), gruvbox(2), gruvbox material(3), rose-pine(4), nord(5): " input
 fi
 
@@ -61,7 +65,6 @@ if [ -n "$new" ]; then
 # -------- nvim ---------   
     mv ~/.config/nvim/lua/plugins/colorscheme.lua ~/.config/nvim/alt/$old.lua
     mv ~/.config/nvim/alt/$new.lua ~/.config/nvim/lua/plugins/colorscheme.lua
-
 fi
 
 # -------- alacritty --------
@@ -79,11 +82,9 @@ cat "$newcolors" >> "$alacritty"
 # ------- i3 -------
 newcolors="$HOME/.config/i3/colors/$new.txt"
 colors="$HOME/.config/i3/colors/colors.txt"
-
 i3config="$HOME/.config/i3/config"
 
 cp $i3config "$i3config.bak"
-(most of the plugins required for these to work are listed in the respective files, but i might have forgotten some)
 
 oldcolors=$(grep '^# ' "$colors" | awk '{print $2}').txt
 
@@ -107,14 +108,18 @@ if [[ "$XDG_SESSION_DESKTOP" == "i3" ]]; then
     i3 restart
 fi
 
-# ------- keyboard rgb -------
+if [[ "$HOSTNAME" == "archglaia" ]]; then
 
-# uses https://github.com/dokutan/rgb_keyboard
-sudo rgb_keyboard --custom-pattern "$HOME/.config/keyboard/$new.conf"
+    # ------- keyboard rgb -------
+    # uses https://github.com/dokutan/rgb_keyboard
+    sudo rgb_keyboard --custom-pattern "$HOME/.config/keyboard/$new.conf"
+
+    # ------- spicetify (Dribbblish) ------- 
+    spicetify config color_scheme "$spotheme"
+    spicetify apply
+
+fi
 
 # ------- obsidian -------
 sed -i -e "s/\"cssTheme\".*/\"cssTheme\": \"$obtheme\"/" "$HOME/Documents/uni/obsidian-vault/.obsidian/appearance.json"
 
-# ------- spicetify (Dribbblish) ------- 
-spicetify config color_scheme "$spotheme"
-spicetify apply
