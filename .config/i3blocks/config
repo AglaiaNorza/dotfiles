@@ -97,3 +97,10 @@ background=#2b364d
 [time]
 command=date '+%H:%M'
 interval=5
+
+[emergencyexit]
+interval=once
+border_bottom=3
+border_left=3
+border_right=3
+border_top=3

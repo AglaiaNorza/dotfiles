@@ -97,3 +97,11 @@ background=#565f89
 command=date '+%H:%M'
 border=#565f89
 interval=5
+
+[emergencyexit]
+interval=once
+border=#9aa5ce
+border_top=2
+border_bottom=2
+border_left=2
+border_right=2

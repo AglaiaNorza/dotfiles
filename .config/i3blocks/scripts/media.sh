@@ -18,3 +18,7 @@ if [ $? -ne 0 ]; then
 else
     echo "$(handle_length "$track") - $(handle_length "$artist")"
 fi
+
+if [ "${BLOCK_BUTTON}" ]; then
+    exec spotify
+fi
