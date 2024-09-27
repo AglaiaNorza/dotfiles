@@ -258,6 +258,10 @@ bindsym XF86LaunchA exec --no-startup-id maim "/home/aglaia/Pictures/Screenshots
 
 bindsym XF86LaunchB exec --no-startup-id maim --select "/home/aglaia/Pictures/Screenshots/$(date '+%d-%m - %H:%M').png"
 
+bindsym F3 exec --no-startup-id maim "/home/aglaia/Pictures/Screenshots/$(date '+%d-%m - %H:%M').png"
+
+bindsym F4 exec --no-startup-id maim --select "/home/aglaia/Pictures/Screenshots/$(date '+%d-%m - %H:%M').png"
+
 # change keyboard layout (and its i3block)
 bindsym Mod4+space exec setxkbmap -layout us && pkill -RTMIN+3 i3blocks
 bindsym Mod4+Shift+space exec setxkbmap -layout it && pkill -RTMIN+3 i3blocks
