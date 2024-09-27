@@ -1,17 +1,7 @@
-slowly building something i like (and learning so much from it!!!) (i know very little but i love learning/knowledge in general, so !)
+my config files for my arch + i3 setup(s, i use them on both my PC and laptop).
 
-my favourite out of the i3blocks configs i did:
-![mono](res/monobar.png)
+i'm slowly building something i like (and learning so much from it!!!) (i know very little but i love learning/knowledge in general, so !)
 
-another (less depressing) one:
-![icons](res/iconsbar.png)
+(i really have nothing to do, so i made a basic script that switches and edits some files, effectively changing the theme of the main things i use (and my keyboard rgb)):
 
-an old one i don't really like:
-![underlined](res/underlinedbar.png)
-
-(i really have nothing to do):
-
-https://github.com/user-attachments/assets/38080900-d7d3-4f79-a99f-0426eea61dad
-
-(this now changes my keyboard RGB too!)
-(it's just a script that moves stuff around, nothing fancy)
+[theme change](https://github.com/user-attachments/assets/38080900-d7d3-4f79-a99f-0426eea61dad)

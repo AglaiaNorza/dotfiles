@@ -108,6 +108,15 @@ if [[ "$XDG_SESSION_DESKTOP" == "i3" ]]; then
     i3 restart
 fi
 
+# ------- yazi -------
+old=$(head -n 1 ~/.config/yazi/theme.toml | sed 's/[#\n]//g')
+
+mv ~/.config/yazi/theme.toml ~/.config/yazi/alt/$old.toml
+mv ~/.config/yazi/alt/$new.toml ~/.config/yazi/theme.toml
+
+# ------- obsidian -------
+sed -i -e "s/\"cssTheme\".*/\"cssTheme\": \"$obtheme\"/" "$HOME/Documents/uni/obsidian-vault/.obsidian/appearance.json"
+
 if [[ "$HOSTNAME" == "archglaia" ]]; then
 
     # ------- keyboard rgb -------
@@ -119,7 +128,4 @@ if [[ "$HOSTNAME" == "archglaia" ]]; then
     spicetify apply
 
 fi
-
-# ------- obsidian -------
-sed -i -e "s/\"cssTheme\".*/\"cssTheme\": \"$obtheme\"/" "$HOME/Documents/uni/obsidian-vault/.obsidian/appearance.json"
 

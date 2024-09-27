@@ -200,7 +200,7 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # automatically opens firefox on the second workspace
 # (to get the class, run xprop on the terminal and click on the window you need)
- assign [class=firefox] $ws2
+ #assign [class=firefox] $ws2
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -257,6 +257,10 @@ bindsym $mod+Shift+plus gaps inner all plus 10
 bindsym XF86LaunchA exec --no-startup-id maim "/home/aglaia/Pictures/Screenshots/$(date '+%d-%m - %H:%M').png"
 
 bindsym XF86LaunchB exec --no-startup-id maim --select "/home/aglaia/Pictures/Screenshots/$(date '+%d-%m - %H:%M').png"
+
+bindsym F3 exec --no-startup-id maim "/home/aglaia/Pictures/Screenshots/$(date '+%d-%m - %H:%M').png"
+
+bindsym F4 exec --no-startup-id maim --select "/home/aglaia/Pictures/Screenshots/$(date '+%d-%m - %H:%M').png"
 
 # change keyboard layout (and its i3block)
 bindsym Mod4+space exec setxkbmap -layout us && pkill -RTMIN+3 i3blocks

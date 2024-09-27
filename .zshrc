@@ -8,7 +8,7 @@ alias edi3='nvim ~/.config/i3/config'
 alias bar=~/scripts/switchbar.sh
 alias theme=~/scripts/themechange.sh
 alias obsi=~/scripts/obsidianise.sh
-alias addall='cd -- && cd .config && dotfiles add alacritty i3 i3blocks keyboard nvim && cd -- && dotfiles add scripts res .zshrc README.md'
+alias addall='cd -- && cd .config && dotfiles add alacritty i3 i3blocks keyboard nvim yazi quotes.txt && cd -- && dotfiles add scripts res .zshrc README.md'
 
 # ------- git info: -------
 autoload -Uz vcs_info
@@ -67,4 +67,7 @@ bindkey              '^I'         menu-complete
 # ------- vim-like -------
 bindkey -v
 export KEYTIMEOUT=1
+
+python ~/scripts/printquote.py
+
 # plugins: autosuggestions, autocomplete, eza
