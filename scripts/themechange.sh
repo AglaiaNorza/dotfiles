@@ -7,7 +7,7 @@ NC='\033[0m'
 
 if [ -z "$input" ]; then
     echo -e "${YELLOW}change the system theme by moving some files around !\nchoose a theme by selecting a number${NC}"
-    read -e -p "tokyonight(1), gruvbox(2), gruvbox material(3), rose-pine(4), nord(5): " input
+    read -e -p "tokyonight(1), gruvbox(2), gruvbox material(3), rose-pine(4), nord(5), gruvbox-light(6): " input
 fi
 
 new=""
@@ -50,6 +50,13 @@ case $input in
         i3txt="#d9dff9"
         obtheme="Obsidian Nord"
         spotheme="nord-dark"
+        ;;
+    "6")
+        new="gruvboxlight"
+        i3barc="#665c54"
+        i3txt="#ebdbb2"
+        obtheme="Obsidian gruvbox"       
+        spotheme="gruvbox-material-dark"
         ;;
 esac
 
@@ -100,8 +107,8 @@ sed -i -e "s/background=#.*/background=$i3barc/" \
     -e "s/color=#.*/color=$i3txt/" \
     "$HOME/.config/i3blocks/config" 
 
-mv "$HOME/Pictures/backgrounds/current.png" "$HOME/Pictures/backgrounds/$old.png"
-mv "$HOME/Pictures/backgrounds/$new.png" "$HOME/Pictures/backgrounds/current.png"
+mv "$HOME/.config/backgrounds/current.png" "$HOME/.config/backgrounds/$old.png"
+mv "$HOME/.config/backgrounds/$new.png" "$HOME/.config/backgrounds/current.png"
 
 if [[ "$XDG_SESSION_DESKTOP" == "i3" ]]; then
     #reload to see the bar
@@ -116,6 +123,13 @@ mv ~/.config/yazi/alt/$new.toml ~/.config/yazi/theme.toml
 
 # ------- obsidian -------
 sed -i -e "s/\"cssTheme\".*/\"cssTheme\": \"$obtheme\"/" "$HOME/Documents/uni/obsidian-vault/.obsidian/appearance.json"
+
+# dark vs light themes
+if [[ "$new" == "gruvboxlight" ]]; then
+    sed -i -e 's/\("theme": *\).*/\1"moonstone",/' "$HOME/Documents/uni/obsidian-vault/.obsidian/appearance.json"
+elif [[ "$old" == "gruvboxlight" ]]; then
+    sed -i -e 's/\("theme": *\).*/\1"obsidian",/' "$HOME/Documents/uni/obsidian-vault/.obsidian/appearance.json"
+fi
 
 if [[ "$HOSTNAME" == "archglaia" ]]; then
 

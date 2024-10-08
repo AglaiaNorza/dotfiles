@@ -1,0 +1,13 @@
+# gruvboxlight
+
+set $offwhite #ebdbb2
+set $bar_bg #3c3836
+set $separator #666666
+set $focused #a89984
+set $inactive #928374
+set $active #665c54
+set $urgent #9d0006
+set $urgent2 #cc241d
+set $bmode #b16286
+
+#endcolors

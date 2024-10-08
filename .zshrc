@@ -8,7 +8,8 @@ alias edi3='nvim ~/.config/i3/config'
 alias bar=~/scripts/switchbar.sh
 alias theme=~/scripts/themechange.sh
 alias obsi=~/scripts/obsidianise.sh
-alias addall='cd -- && cd .config && dotfiles add alacritty i3 i3blocks keyboard nvim yazi quotes.txt && cd -- && dotfiles add scripts res .zshrc README.md'
+alias addall='cd -- && cd .config && dotfiles add alacritty i3 i3blocks keyboard nvim yazi backgrounds quotes.txt && cd -- && dotfiles add scripts .zshrc README.md'
+alias stfu=shutdown now
 
 # ------- git info: -------
 autoload -Uz vcs_info
