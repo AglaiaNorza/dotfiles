@@ -4,4 +4,4 @@ i'm slowly building something i like (and learning so much from it!!!) (i know v
 
 (i really have nothing to do, so i made a basic script that switches and edits some files, effectively changing the theme of the main things i use (and my keyboard rgb)):
 
-[theme change](https://github.com/user-attachments/assets/38080900-d7d3-4f79-a99f-0426eea61dad)
+[theme change preview](https://github.com/user-attachments/assets/5b0adbb5-096a-4f9b-923a-7cea2ca43e08)
