@@ -21,7 +21,7 @@ case $input in
         i3barc="#2b364d"
         i3txt="#d9dff9"
         obtheme="Tokyo Night"
-        spotheme="catpuccin-macchiato"
+        spotheme="catppuccin-macchiato"
         ;;
     "2")
         new="gruvbox"
@@ -112,7 +112,7 @@ mv "$HOME/.config/backgrounds/$new.png" "$HOME/.config/backgrounds/current.png"
 
 if [[ "$XDG_SESSION_DESKTOP" == "i3" ]]; then
     #reload to see the bar
-    i3 restart
+    i3 restart >/dev/null
 fi
 
 # ------- yazi -------
@@ -138,8 +138,8 @@ if [[ "$HOSTNAME" == "archglaia" ]]; then
     sudo rgb_keyboard --custom-pattern "$HOME/.config/keyboard/$new.conf"
 
     # ------- spicetify (Dribbblish) ------- 
-    spicetify config color_scheme "$spotheme"
-    spicetify apply
+    spicetify config color_scheme "$spotheme" > /dev/null
+    spicetify apply > /dev/null
 
 fi
 

@@ -249,7 +249,7 @@ exec_always i3 gaps inner all minus 10
 # this shouldn't be here but when i put it in my Xorg settings it broke everything so here it is :D
 exec_always xinput set-prop 13 "libinput Scrolling Pixel Distance" 40
 # temporary
-exec_always autokey-gtk
+exec autokey-gtk
 exec --no-startup-id dunst
-exec_always feh --bg-scale ~/.config/backgrounds/current.png
+exec_always feh --bg-fill ~/.config/backgrounds/current.png
 exec setxkbmap -layout us
