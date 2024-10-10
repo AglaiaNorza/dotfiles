@@ -223,8 +223,6 @@ bar {
     strip_workspace_numbers yes
 }
 
-
-
 # start a terminal
 bindsym $mod+Return exec alacritty
 # start firefox
@@ -248,6 +246,12 @@ exec_always xrandr --output eDP1 --scale 0.8x0.8
 # my PC two-monitor setup
 exec_always xrandr --output HDMI-2 --auto --left-of HDMI-1 
 exec_always i3 gaps inner all minus 10
+# this shouldn't be here but when i put it in my Xorg settings it broke everything so here it is :D
+exec_always xinput set-prop 13 "libinput Scrolling Pixel Distance" 40
+# temporary
+exec_always autokey-gtk
+exec --no-startup-id dunst
 
-exec_always feh --bg-scale ~/Pictures/backgrounds/current.png
+#exec_always feh --bg-scale ~/.config/backgrounds/current.png
+exec_always feh --bg-scale ~/Downloads/friedrich.png
 exec setxkbmap -layout us
