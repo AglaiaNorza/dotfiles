@@ -13,6 +13,10 @@ if [ -z "$input" ] && [ -z "$2" ]; then
     exit 1
 fi
 
+if [ "$input" = "--prompt" ]; then
+    read -e -p "file name: " input
+fi
+
 if [ -z "$2"  ]; then
     location="$HOME/Pictures/Screenshots"
 else
