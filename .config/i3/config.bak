@@ -65,7 +65,7 @@ bindsym XF86LaunchB exec --no-startup-id maim --select "/home/aglaia/Pictures/Sc
 bindsym F3 exec --no-startup-id maim "/home/aglaia/Pictures/Screenshots/$(date '+%d-%m - %H:%M:%S').png"
 bindsym F4 exec --no-startup-id maim --select "/home/aglaia/Pictures/Screenshots/$(date '+%d-%m - %H:%M:%S').png"
 # obsidian-ready screenshot! with renaming
-bindsym XF86Explorer exec --no-startup-id maim --select "/home/aglaia/Pictures/Screenshots/$(date '+%d-%m - %H:%M:%S').png" && alacritty -e zsh -c '~/scripts/obsidianise.sh --prompt' 
+bindsym XF86KbdBrightnessDown exec --no-startup-id maim --select "/home/aglaia/Pictures/Screenshots/$(date '+%d-%m - %H:%M:%S').png" && alacritty -e zsh -c '~/scripts/obsidianise.sh --prompt' 
 bindsym F1 exec --no-startup-id maim --select "/home/aglaia/Pictures/Screenshots/$(date '+%d-%m - %H:%M:%S').png" && alacritty -e zsh -c '~/scripts/obsidianise.sh --prompt' 
 
 # ------- main (movement/windows) -------
