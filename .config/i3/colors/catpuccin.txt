@@ -1,0 +1,13 @@
+# catpuccin
+
+set $offwhite #c6d0f5
+set $bar_bg #303446
+set $separator #666666
+set $focused #51576d
+set $inactive #232634
+set $active #292c3c
+set $urgent #babbf1
+set $urgent2 #8caaee
+set $bmode #A07CBC
+
+#endcolors

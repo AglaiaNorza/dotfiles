@@ -7,7 +7,7 @@ NC='\033[0m'
 
 if [ -z "$input" ]; then
     echo -e "${YELLOW}change the system theme by moving some files around !\nchoose a theme by selecting a number${NC}"
-    read -e -p "tokyonight(1), gruvbox(2), gruvbox material(3), rose-pine(4), nord(5), gruvbox-light(6): " input
+    read -e -p "tokyonight(1), gruvbox(2), gruvbox material(3), rose-pine(4), nord(5), catpuccin(6), gruvbox-light(7): " input
 fi
 
 new=""
@@ -16,42 +16,51 @@ obtheme=""
 spotheme=""
 
 case $input in 
-    "1")
+    "1"|"tokyonight")
         new="tokyonight"
         i3barc="#2b364d"
         i3txt="#d9dff9"
         obtheme="Tokyo Night"
         spotheme="catppuccin-macchiato"
         ;;
-    "2")
+    "2"|"gruvbox")
         new="gruvbox"
         i3barc="#32302f"
         i3txt="#a89984"
         obtheme="Obsidian gruvbox"
         spotheme="gruvbox-material-dark"
         ;;
-    "3")
+    "3"|"gruvboxmaterial"|"gruvboxm")
         new="gruvboxmaterial"
         i3barc="#32302f"
         i3txt="#d4be98"
         obtheme="Material Gruvbox"
         spotheme="gruvbox-material-dark"
         ;;
-    "4")
+    "4"|"rosepine"|"rose-pine")
         new="rosepine"
         i3barc="#393552"
         i3txt="#e0def4"
         obtheme="Rosé Pine"
         spotheme="rosepine"
         ;;
-    "5")
+    "5"|"nord")
         new="nord"
         i3barc="#3d4a54"
         i3txt="#d9dff9"
         obtheme="Obsidian Nord"
         spotheme="nord-dark"
         ;;
-    "6")
+
+    "6"|"catpuccin")
+        new="catpuccin"
+        i3barc="#292c3c"
+        i3txt="#c6d0f5"
+        obtheme="Catpuccin"
+        spotheme="catpuccin-frappe"
+        ;;
+
+    "7"|"gruvboxlight")
         new="gruvboxlight"
         i3barc="#665c54"
         i3txt="#ebdbb2"

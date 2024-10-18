@@ -1,14 +1,14 @@
-# gruvboxmaterial
+# gruvboxlight
 
-set $offwhite #d4be98
-set $bar_bg #1d1e1f
+set $offwhite #ebdbb2
+set $bar_bg #3c3836
 set $separator #666666
-set $focused #504945
-set $inactive #3c3836
-set $active #282828
-set $urgent #3c1f1e
-set $urgent2 #442e2d
-set $bmode #A07CBC
+set $focused #a89984
+set $inactive #928374
+set $active #665c54
+set $urgent #9d0006
+set $urgent2 #cc241d
+set $bmode #b16286
 
 #endcolors
 
