@@ -1,14 +1,14 @@
-# gruvboxlight
+# catpuccin
 
-set $offwhite #ebdbb2
-set $bar_bg #3c3836
+set $offwhite #c6d0f5
+set $bar_bg #303446
 set $separator #666666
-set $focused #a89984
-set $inactive #928374
-set $active #665c54
-set $urgent #9d0006
-set $urgent2 #cc241d
-set $bmode #b16286
+set $focused #51576d
+set $inactive #232634
+set $active #292c3c
+set $urgent #babbf1
+set $urgent2 #8caaee
+set $bmode #A07CBC
 
 #endcolors
 
