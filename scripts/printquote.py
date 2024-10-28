@@ -1,7 +1,9 @@
-import random, os
+import random, os, sys
 from colorama import Fore, Style
 
-with open(os.path.expanduser('~')+'/.config/quotes.txt', 'r') as file:
+fname = "quotessafe.txt" if len(sys.argv) > 1 and sys.argv[1] == "--safe" else "quotes.txt"
+
+with open(os.path.expanduser('~')+'/.config/'+fname, 'r') as file:
     quotes = file.read().split('----')
 
 color = random.choice([Fore.RED, Fore.GREEN, Fore.YELLOW,

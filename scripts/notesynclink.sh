@@ -1,0 +1,1 @@
+/home/aglaia/Documents/uni/notes-ig/notesync.sh
