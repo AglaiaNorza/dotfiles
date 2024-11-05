@@ -12,6 +12,9 @@ alias notesync=~/Documents/uni/notes-ig/notesync.sh
 alias addall='cd -- && cd .config && dotfiles add alacritty i3 i3blocks keyboard nvim yazi backgrounds quotes.txt quotessafe.txt && cd -- && dotfiles add scripts .zshrc README.md'
 alias stfu=shutdown now
 alias term=~/scripts/safeterm.sh
+
+alias cat=bat
+
 # ------- git info: -------
 autoload -Uz vcs_info
 precmd() { vcs_info }
