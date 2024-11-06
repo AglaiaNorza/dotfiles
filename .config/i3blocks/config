@@ -1,12 +1,12 @@
 #configmono
-color=#d4be98
+color=#d9dff9
 separator=false
 #separator_block_width=25
 border_top=0
 border_left=0
 border_right=0
 border_bottom=2
-border=#32302f
+border=#2b364d
 # $SCRIPTS is defined in i3 config
 command=$SCRIPTS/$BLOCK_NAME.sh
 
@@ -14,7 +14,7 @@ command=$SCRIPTS/$BLOCK_NAME.sh
 full_text= 󰝚 
 command=
 interval=once
-background=#32302f
+background=#2b364d
 
 [media]
 interval=3
@@ -24,7 +24,7 @@ signal=2
 full_text= 󰌓 
 command=
 interval=once
-background=#32302f
+background=#2b364d
 
 [keyboard]
 interval=once
@@ -34,7 +34,7 @@ signal=3
 full_text= 
 signal=1
 interval=once
-background=#32302f
+background=#2b364d
 
 [soundnoemoji]
 full_text=0% 
@@ -45,7 +45,7 @@ signal=1
 #full_text=  
 #command=
 interval=once
-background=#32302f
+background=#2b364d
 
 [brightness]
 interval=once
@@ -53,7 +53,7 @@ signal=13
 
 [bluetoothicon]
 interval=once
-background=#32302f
+background=#2b364d
 
 [bluetooth]
 interval=10
@@ -62,7 +62,7 @@ interval=10
 full_text=  
 command=
 interval=once
-background=#32302f
+background=#2b364d
 
 [cpu]
 full_text=00.0°c 
@@ -71,7 +71,7 @@ interval=20
 [batteryicon]
 #full_text= 󰂄 
 interval=10
-background=#32302f
+background=#2b364d
 
 [batterynoemoji]
 interval=10
@@ -80,7 +80,7 @@ interval=10
 full_text= 󰃭 
 command=
 interval=once
-background=#32302f
+background=#2b364d
 
 # Date Time
 [date]
@@ -91,7 +91,7 @@ interval=5
 full_text= 󰦖 
 command=
 interval=once
-background=#32302f
+background=#2b364d
 
 # Date Time
 [time]
