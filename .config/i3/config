@@ -238,6 +238,8 @@ bar {
 
 # start a terminal
 bindsym $mod+Return exec alacritty
+# yazi
+bindsym $mod+Shift+y exec alacritty -e yazi
 # start firefox
 bindsym $mod+Shift+f exec firefox
 # start spotify
