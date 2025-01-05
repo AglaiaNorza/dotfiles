@@ -1,0 +1,5 @@
+[plugin]
+deps = [{ use = "h-hg/yamb", rev = "108347b" }]
+
+[flavor]
+deps = []

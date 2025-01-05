@@ -60,13 +60,23 @@ bindsym XF86AudioNext exec playerctl next && $refresh_music
 bindsym XF86AudioPrev exec playerctl previous && $refresh_music
 
 # screenshots (keys have different names on pc and mac.......)
-bindsym XF86LaunchA exec --no-startup-id maim "/home/aglaia/Pictures/Screenshots/$(date '+%d-%m - %H:%M:%S').png"
-bindsym XF86LaunchB exec --no-startup-id maim --select "/home/aglaia/Pictures/Screenshots/$(date '+%d-%m - %H:%M:%S').png"
-bindsym F3 exec --no-startup-id maim "/home/aglaia/Pictures/Screenshots/$(date '+%d-%m - %H:%M:%S').png"
-bindsym F4 exec --no-startup-id maim --select "/home/aglaia/Pictures/Screenshots/$(date '+%d-%m - %H:%M:%S').png"
+
+# old (maim)
+#bindsym XF86LaunchA exec --no-startup-id maim "/home/aglaia/Pictures/Screenshots/$(date '+%d-%m - %H:%M:%S').png"
+#bindsym XF86LaunchB exec --no-startup-id maim --select "/home/aglaia/Pictures/Screenshots/$(date '+%d-%m - %H:%M:%S').png"
+#bindsym F3 exec --no-startup-id maim "/home/aglaia/Pictures/Screenshots/$(date '+%d-%m - %H:%M:%S').png"
+#bindsym F4 exec --no-startup-id maim --select "/home/aglaia/Pictures/Screenshots/$(date '+%d-%m - %H:%M:%S').png"
+#bindsym XF86KbdBrightnessDown exec --no-startup-id maim --select "/home/aglaia/Pictures/Screenshots/$(date '+%d-%m - %H:%M:%S').png" && alacritty -e zsh -c '~/scripts/obsidianise.sh --prompt' 
+#bindsym F1 exec --no-startup-id maim --select "/home/aglaia/Pictures/Screenshots/$(date '+%d-%m - %H:%M:%S').png" && alacritty -e zsh -c '~/scripts/obsidianise.sh --prompt' 
+
+bindsym XF86LaunchA exec flameshot full --path ~/Pictures/Screenshots
+bindsym XF86LaunchB exec flameshot gui --path ~/Pictures/Screenshots
+bindsym F3 exec flameshot full --path ~/Pictures/Screenshots
+bindsym F4 exec flameshot gui --path ~/Pictures/Screenshots
+
 # obsidian-ready screenshot! with renaming
-bindsym XF86KbdBrightnessDown exec --no-startup-id maim --select "/home/aglaia/Pictures/Screenshots/$(date '+%d-%m - %H:%M:%S').png" && alacritty -e zsh -c '~/scripts/obsidianise.sh --prompt' 
-bindsym F1 exec --no-startup-id maim --select "/home/aglaia/Pictures/Screenshots/$(date '+%d-%m - %H:%M:%S').png" && alacritty -e zsh -c '~/scripts/obsidianise.sh --prompt' 
+bindsym XF86KbdBrightnessDown exec flameshot gui --path ~/Pictures/Screenshots && alacritty -e zsh -c '~/scripts/obsidianise.sh --prompt' 
+bindsym F1 exec flameshot gui --path ~/Pictures/Screenshots && alacritty -e zsh -c '~/scripts/obsidianise.sh --prompt' 
 
 # ------- main (movement/windows) -------
 
