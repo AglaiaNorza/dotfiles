@@ -38,5 +38,5 @@ fi
 
 if [[ "$XDG_SESSION_DESKTOP" == "i3" ]]; then
     #reload to see the bar
-    i3 restart
+    i3 restart >/dev/null
 fi
