@@ -134,11 +134,11 @@ mv ~/.config/yazi/alt/$new.toml ~/.config/yazi/theme.toml
 sed -i -e "s/\"cssTheme\".*/\"cssTheme\": \"$obtheme\"/" "$HOME/Documents/uni/obsidian-vault/.obsidian/appearance.json"
 
 # dark vs light themes
-if [[ "$new" == "gruvboxlight" ]]; then
-    sed -i -e 's/\("theme": *\).*/\1"moonstone",/' "$HOME/Documents/uni/obsidian-vault/.obsidian/appearance.json"
-elif [[ "$old" == "gruvboxlight" ]]; then
-    sed -i -e 's/\("theme": *\).*/\1"obsidian",/' "$HOME/Documents/uni/obsidian-vault/.obsidian/appearance.json"
-fi
+#if [[ "$new" == "gruvboxlight" ]]; then
+#    sed -i -e 's/\("theme": *\).*/\1"moonstone",/' "$HOME/Documents/uni/obsidian-vault/.obsidian/appearance.json"
+#elif [[ "$old" == "gruvboxlight" ]]; then
+#    sed -i -e 's/\("theme": *\).*/\1"obsidian",/' "$HOME/Documents/uni/obsidian-vault/.obsidian/appearance.json"
+#fi
 
 if [[ "$HOSTNAME" == "archglaia" ]]; then
 

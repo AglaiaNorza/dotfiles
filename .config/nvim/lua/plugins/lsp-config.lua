@@ -23,7 +23,7 @@ return {
 
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "jdtls", "pylsp" },
+				ensure_installed = { "lua_ls", "jdtls", "pylsp", "clangd" },
 			})
 		end,
 	},
@@ -35,6 +35,7 @@ return {
 			lspconfig.lua_ls.setup({})
 			lspconfig.jdtls.setup({})
 			lspconfig.pylsp.setup({})
+            lspconfig.clangd.setup({})
 
 			--keymaps
 			vim.keymap.set("n", "H", vim.lsp.buf.hover, {}) --hover over code

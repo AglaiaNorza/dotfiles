@@ -1,5 +1,7 @@
-[plugin]
-deps = [{ use = "h-hg/yamb", rev = "108347b" }]
+[[plugin.deps]]
+use = "h-hg/yamb"
+rev = "108347b"
+hash = "faf1b817347b5b46c96039dab538694b"
 
 [flavor]
 deps = []

@@ -10,15 +10,15 @@ border=#2b364d
 # $SCRIPTS is defined in i3 config
 command=$SCRIPTS/$BLOCK_NAME.sh
 
-[icon]
-full_text= 󰝚 
-command=
-interval=once
-background=#2b364d
+#[icon]
+#full_text= 󰝚 
+#command=
+#interval=once
+#background=#2b364d
 
-[media]
-interval=3
-signal=2
+#[media]
+#interval=3
+#signal=2
 
 [icon]
 full_text= 󰌓 
@@ -51,22 +51,22 @@ background=#2b364d
 interval=once
 signal=13
 
-[bluetoothicon]
-interval=once
-background=#2b364d
+#[bluetoothicon]
+#interval=once
+#background=#2b364d
 
-[bluetooth]
-interval=10
+#[bluetooth]
+#interval=10
 
-[icon]
-full_text=  
-command=
-interval=once
-background=#2b364d
+#[icon]
+#full_text=  
+#command=
+#interval=once
+#background=#2b364d
 
-[cpu]
-full_text=00.0°c 
-interval=20
+#[cpu]
+#full_text=00.0°c 
+#interval=20
 
 [batteryicon]
 #full_text= 󰂄 
