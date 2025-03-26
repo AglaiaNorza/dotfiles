@@ -23,7 +23,7 @@ return {
 
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "jdtls", "pylsp", "clangd" },
+				ensure_installed = { "lua_ls", "jdtls", "pyright", "clangd" },
 			})
 		end,
 	},
@@ -34,7 +34,7 @@ return {
 			local lspconfig = require("lspconfig")
 			lspconfig.lua_ls.setup({})
 			lspconfig.jdtls.setup({})
-			lspconfig.pylsp.setup({})
+			lspconfig.pyright.setup({})
             lspconfig.clangd.setup({})
 
 			--keymaps

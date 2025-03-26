@@ -10,15 +10,18 @@ handle_length() {
     fi
 }
 
-track=$(playerctl metadata title)
-artist=$(playerctl metadata artist)
+if [[ "$HOSTNAME" == "archglaia" ]]; then
 
-if [ $? -ne 0 ]; then
-    echo "silence"
-else
-    echo "$(handle_length "$track") - $(handle_length "$artist")"
-fi
+    track=$(playerctl metadata title)
+    artist=$(playerctl metadata artist)
+    
+    if [ $? -ne 0 ]; then
+       echo "silence"
+    else
+        echo "$(handle_length "$track") - $(handle_length "$artist")"
+    fi
 
-if [ "${BLOCK_BUTTON}" ]; then
-    exec spotify
+    if [ "${BLOCK_BUTTON}" ]; then
+        exec spotify
+    fi
 fi
