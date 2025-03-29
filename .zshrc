@@ -75,6 +75,9 @@ export KEYTIMEOUT=1
 
 python ~/scripts/printquote.py
 
+# -- zoxide --
+eval "$(zoxide init zsh)"
+
 # plugins: autosuggestions, autocomplete, eza
 
 ## [Completion]
