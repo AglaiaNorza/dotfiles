@@ -197,7 +197,7 @@ gaps outer -10
 
 smart_gaps off
 
-for_window [class=".*"] border none
+for_window [class=".*"] border pixel
 
 bindsym $mod+Shift+minus gaps inner all minus 10
 #bindsym $mod+Shift+minus gaps outer current minus 5
