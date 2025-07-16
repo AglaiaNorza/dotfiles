@@ -1,6 +1,6 @@
 #tokyonight
 
-[mgr]
+[manager]
 cwd = { fg = "#94e2d5" }
 
 # Hovered

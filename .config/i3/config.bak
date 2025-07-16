@@ -29,7 +29,7 @@ exec --no-startup-id picom -b
 
 # class                 border  bground  text   indicator child_border
 
-client.focused           $darkg $blueg   $offwhite $darkg  $darkg
+client.focused           $darkg $blueg   $offwhite $darkg  #333533
 client.focused_inactive  #16161d #16161d $offwhite #16161d   #16161d
 client.unfocused         #16161d #16161d $offwhite #16161d   #16161d
 
@@ -76,7 +76,7 @@ bindsym F4 exec flameshot gui --path ~/Pictures/Screenshots
 
 # obsidian-ready screenshot! with renaming
 bindsym XF86KbdBrightnessDown exec flameshot gui --path ~/Pictures/Screenshots && alacritty -e zsh -c '~/scripts/obsidianise.sh --prompt' 
-bindsym F1 exec flameshot gui --path ~/Pictures/Screenshots && alacritty -e zsh -c '~/scripts/obsidianise.sh --prompt' 
+bindsym F1 exec flameshot gui --path ~/Pictures/Screenshots && alacritty -e zsh -l -c '~/scripts/obsidianise.sh --prompt' 
 
 # ------- main (movement/windows) -------
 
@@ -197,7 +197,7 @@ gaps outer -10
 
 smart_gaps off
 
-for_window [class=".*"] border pixel
+for_window [class=".*"] border pixel 3
 
 bindsym $mod+Shift+minus gaps inner all minus 10
 #bindsym $mod+Shift+minus gaps outer current minus 5

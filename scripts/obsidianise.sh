@@ -1,6 +1,14 @@
 #!/bin/bash
 
 # quickly moves files to the attachment directory of my obsidian vault (and renames them)
+echo "DISPLAY=$DISPLAY" >> /tmp/obs_debug.log
+echo "XAUTHORITY=$XAUTHORITY" >> /tmp/obs_debug.log
+env | grep -i xclip >> /tmp/obs_debug.log
+
+# Test clipboard
+echo "hello" | xclip -selection clipboard
+sleep 0.5
+xclip -o >> /tmp/obs_debug.log 2>&1
 
 input="$1"
 
@@ -42,7 +50,27 @@ fi
 
 extension="${file##*.}"
 
+newloc="$HOME/Documents/uni/obsidian-vault/attachments/"
+
+# handle duplicate names
+declare -i i=0
+while [ -e "$newloc$input.$extension" ]; do
+    i=$((i + 1))
+    input="$input$i"
+done
+
+cliptext="ciao"
+
+echo "aaaaa" | xclip -selection clipboard -loops 1
+
+if command -v xclip >/dev/null && [[ -n $DISPLAY ]]; then
+    echo "![[${input}.${extension}|center]]" | /usr/bin/xclip -selection clipboard -i
+else
+    echo "Clipboard not available: xclip not installed or no DISPLAY."
+fi
+
 mv "$location/$file" \
-    "$HOME/Documents/uni/obsidian-vault/attachments/$input.$extension"
+    "$newloc$input.$extension"
+
 
 echo "Moved $file to $HOME/Documents/uni/obsidian-vault/attachments/$input.$extension"
