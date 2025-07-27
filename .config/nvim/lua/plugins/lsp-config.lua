@@ -24,17 +24,17 @@ return {
 		config = function()
 			require("mason-lspconfig").setup({
 				ensure_installed = { "lua_ls", "jdtls", "pyright", "clangd" },
-			})
-		end,
-	},
+            })
+        end,
+    },
 
-	{
-		"neovim/nvim-lspconfig",
-		config = function()
-			local lspconfig = require("lspconfig")
-			lspconfig.lua_ls.setup({})
-			lspconfig.jdtls.setup({})
-			lspconfig.pyright.setup({})
+    {
+        "neovim/nvim-lspconfig",
+        config = function()
+            local lspconfig = require("lspconfig")
+            lspconfig.lua_ls.setup({})
+            lspconfig.jdtls.setup({})
+            lspconfig.pyright.setup({})
             lspconfig.clangd.setup({})
 
 			--keymaps
