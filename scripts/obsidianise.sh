@@ -59,18 +59,13 @@ while [ -e "$newloc$input.$extension" ]; do
     input="$input$i"
 done
 
-cliptext="ciao"
-
-echo "aaaaa" | xclip -selection clipboard -loops 1
-
 if command -v xclip >/dev/null && [[ -n $DISPLAY ]]; then
     echo "![[${input}.${extension}|center]]" | /usr/bin/xclip -selection clipboard -i
 else
-    echo "Clipboard not available: xclip not installed or no DISPLAY."
+    echo "clipboard not available"
 fi
 
 mv "$location/$file" \
     "$newloc$input.$extension"
-
 
 echo "Moved $file to $HOME/Documents/uni/obsidian-vault/attachments/$input.$extension"
