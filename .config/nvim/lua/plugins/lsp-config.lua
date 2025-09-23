@@ -21,9 +21,9 @@ return {
 	{
 		"williamboman/mason-lspconfig.nvim",
 
-		config = function()
-			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "jdtls", "pyright", "clangd" },
+        config = function()
+            require("mason-lspconfig").setup({
+                ensure_installed = { "lua_ls", "jdtls", "pyright", "clangd" },
             })
         end,
     },
@@ -31,16 +31,17 @@ return {
     {
         "neovim/nvim-lspconfig",
         config = function()
-            local lspconfig = require("lspconfig")
-            lspconfig.lua_ls.setup({})
-            lspconfig.jdtls.setup({})
-            lspconfig.pyright.setup({})
-            lspconfig.clangd.setup({})
+            vim.lsp.config("lua_ls", {})
+            vim.lsp.config("jdtls", {})
+            vim.lsp.config("pyright", {})
+            vim.lsp.config("clangd", {})
 
-			--keymaps
-			vim.keymap.set("n", "H", vim.lsp.buf.hover, {}) --hover over code
-			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {}) --definition
-			vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {}) --code actions
-		end,
-	},
+            vim.lsp.enable({ "lua_ls", "jdtls", "pyright", "clangd" })
+
+            --keymaps 
+            vim.keymap.set("n", "H", vim.lsp.buf.hover, {}) --hover over code 
+            vim.keymap.set("n", "gd", vim.lsp.buf.definition, {}) --definition 
+            vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {}) --code actions 
+        end,
+    },
 }

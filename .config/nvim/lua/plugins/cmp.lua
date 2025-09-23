@@ -37,10 +37,12 @@ return {
                 mapping = cmp.mapping.preset.insert({
                     ['<C-b>'] = cmp.mapping.scroll_docs(-4),
                     ['<C-f>'] = cmp.mapping.scroll_docs(4),
-                    ['<C-Space>'] = cmp.mapping.complete(),
+                    --['<C-Space>'] = cmp.mapping.complete(),
                     ['<C-e>'] = cmp.mapping.abort(),
-                    ['<CR>'] = cmp.mapping.confirm({ select = false }),
-                    ['<S-CR>'] = cmp.mapping.confirm({ select = false }),
+                    ['<CR>'] = cmp.mapping.confirm({ select = false }), -- "Enter" confirms selection
+                    ['<Space>'] = cmp.mapping.confirm({select = false}), -- "Space" confirms selection
+                    -- CTRL+Space confirms selection and, if nothing is selected, chooses the first option
+                    ["<C-Space>"] = cmp.mapping.confirm({ select = true, behavior = cmp.ConfirmBehavior.Replace }),
                     ["<Tab>"] = cmp.mapping(function(fallback)
                         if cmp.visible() then
                             cmp.select_next_item()
@@ -92,17 +94,18 @@ return {
                 matching = { disallow_symbol_nonprefix_matching = false },
             })
 
-            -- Setup lspconfig capabilities
-            local capabilities = require('cmp_nvim_lsp').default_capabilities()
-            local lspconfig = require('lspconfig')
+            local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-            -- Replace 'YOUR_LSP_SERVER' with your actual LSP servers, e.g. 'pyright', 'tsserver'
-            local servers = { 'pyright', 'clangd', 'lua_ls' } 
+            local servers = { "pyright", "clangd", "lua_ls" }
             for _, server in ipairs(servers) do
-                lspconfig[server].setup {
+                vim.lsp.config(server, {
                     capabilities = capabilities,
-                }
+                })
             end
+
+            -- Enable them all in one go
+            vim.lsp.enable(servers)
+
         end,
     },
 }
