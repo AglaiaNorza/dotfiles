@@ -14,6 +14,14 @@ alias addall='cd -- && cd .config && dotfiles add alacritty i3 i3blocks keyboard
 alias stfu=shutdown now
 alias term=~/scripts/safeterm.sh
 alias suspend='systemctl suspend'
+alias y=yazi
+
+# mkdir + cd
+mkcdir ()
+{
+    mkdir -p -- "$1" &&
+       cd -P -- "$1"
+}
 
 # ------- git info: -------
 autoload -Uz vcs_info
@@ -62,18 +70,18 @@ alias l='eza -F --icons --color=always --group-directories-first'
 # ------- autosuggestions -------
 source ~/.config/zsh/autosuggestions/zsh-autosuggestions.zsh
 
-source ~/.config/zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+#source ~/.config/zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 # for autocomplete
-bindkey -M menuselect  '^[[D' .backward-char  '^[OD' .backward-char
-bindkey -M menuselect  '^[[C'  .forward-char  '^[OC'  .forward-char
-bindkey              '^I'         menu-complete
+#bindkey -M menuselect  '^[[D' .backward-char  '^[OD' .backward-char
+#bindkey -M menuselect  '^[[C'  .forward-char  '^[OC'  .forward-char
+#bindkey              '^I'         menu-complete
 
 # ------- vim-like -------
 bindkey -v
 export KEYTIMEOUT=1
 
-python ~/scripts/printquote.py
+python ~/scripts/printquote.py --safe
 
 # -- zoxide --
 eval "$(zoxide init zsh)"
@@ -85,3 +93,11 @@ eval "$(zoxide init zsh)"
 [[ -f /home/aglaia/.dart-cli-completion/zsh-config.zsh ]] && . /home/aglaia/.dart-cli-completion/zsh-config.zsh || true
 ## [/Completion]
 
+
+# pnpm
+export PNPM_HOME="/home/aglaia/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
