@@ -42,10 +42,74 @@ ls.add_snippets("tex", {
         }))
 })
 
+ls.add_snippets("tex", {
+    s("def", fmt(
+        [[
+        \begin{{defbox}}{{{}}}{{}}
+            {}
+        \end{{defbox}}
+        ]], {
+            i(1),
+            i(0)
+        }))
+})
+
+ls.add_snippets("tex", {
+    s("note", fmt(
+        [[
+        \begin{{gbox}}{{{}}}
+            {}
+        \end{{gbox}}
+        ]], {
+            i(1),
+            i(0)
+        }))
+})
+
+ls.add_snippets("tex", {
+    s("proof", fmt(
+        [[
+        \begin{{proofbox}}{{{}}}{{}}
+            {}
+        \end{{proofbox}}
+        ]], {
+            i(1),
+            i(0)
+        }))
+})
+
+ls.add_snippets("tex", {
+    s("thm", fmt(
+        [[
+        \begin{{thmbox}}{{{}}}{{}}
+            {}
+        \end{{thmbox}}
+        ]], {
+            i(1),
+            i(0)
+        }))
+})
+
+ls.add_snippets("tex", {
+    s("lemma", fmt(
+        [[
+        \begin{{lemmabox}}{{{}}}{{}}
+            {}
+        \end{{lemmabox}}
+        ]], {
+            i(1),
+            i(0)
+        }))
+})
 
 ls.add_snippets("tex", {
     s("mk", {t("\\( "), i(1), t(" \\)")}),
     s("dm", {t("\\[ "), i(1), t(" \\]")})
+})
+
+ls.add_snippets("tex", {
+    s("bd", {t("\\textbf{"), i(1), t("}")}),
+    s("it", {t("\\textit{"), i(1), t("}")})
 })
 
 ls.add_snippets("tex", {
@@ -62,40 +126,43 @@ ls.add_snippets("tex", {
 -- simple symbols
 
 ls.add_snippets("tex", {
-    s("<=", {t("\\leq")}),
-    s(">=", {t("\\geq")}),
-    s("!=", {t"\\neq"}),
-    s("sub=", {t("\\subseteq")}),
-    s("sup=", {t("\\supseteq")})
+    s("<=", {t("\\leq ")}),
+    s(">=", {t("\\geq ")}),
+    s("!=", {t"\\neq "}),
+    s("sub=", {t("\\subseteq ")}),
+    s("sup=", {t("\\supseteq ")}),
 })
 
 ls.add_snippets("tex", {
-    s("times", {t("\\times")}),
-    s("xx", {t("\\times")}),
-    s("cdot", {t("\\cdot")}),
+    s("times", {t("\\times ")}),
+    s("xx", {t("\\times ")}),
+    s("x", {t("\\times ")}),
+    s("cdot", {t("\\cdot ")}),
 })
 
 -- arrows
 ls.add_snippets("tex", {
-    s("->", {t("\\to")}),
-    s("<-", {t("\\leftarrow")}),
+    s("->", {t("\\to ")}),
+    s("<-", {t("\\leftarrow ")}),
 })
 
 -- sets 
 ls.add_snippets("tex", {
-    s("inn", {t("\\in")}),
-    s("notin", {t("\\not\\in")}),
+    s("inn", {t("\\in ")}),
+    s("notin", {t("\\not\\in ")}),
 })
 
 -- logic
 ls.add_snippets("tex", {
-    s("not", {t("\\not")}),
-    s("iff", {t("\\iff")}),
-    s("implies", {t("\\implies")}),
-    s("implied", {t("\\impliedby")}),
-    s("land", {t("\\land")}),
-    s("AND", {t("\\land")}),
-    s("OR", {t("\\lor")}),
+    s("not", {t("\\not ")}),
+    s("iff", {t("\\iff ")}),
+    s("implies", {t("\\implies ")}),
+    s("im", {t("\\implies ")}),
+    s("implied", {t("\\impliedby ")}),
+    s("TO", {t("\\to ")}),
+    s("land", {t("\\land ")}),
+    s("AND", {t("\\land ")}),
+    s("OR", {t("\\lor ")}),
 })
 
 -- greek letters
@@ -139,6 +206,10 @@ ls.add_snippets("tex", {
     s("@Ph", { t("\\Phi") }),
     s("@Ps", { t("\\Psi") }),
     s("@W", { t("\\Omega") }),
+})
+
+ls.add_snippets("tex", {
+    s("èè", {t("È ")}),
 })
 
 -- dynamic/fun snippets --
