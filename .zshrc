@@ -10,7 +10,7 @@ alias theme=~/scripts/themechange.sh
 alias obsi=~/scripts/obsidianise.sh
 alias notesync=~/Documents/uni/notes-ig/notesync.sh
 alias blog=~/Documents/blog/assets/newpost.sh
-alias addall='cd -- && cd .config && dotfiles add alacritty i3 i3blocks keyboard nvim yazi backgrounds quotes.txt quotessafe.txt && cd -- && dotfiles add scripts .zshrc README.md'
+alias addall='cd -- && cd .config && dotfiles add alacritty i3 i3blocks keyboard nvim yazi backgrounds quotes.txt quotessafe.txt && cd -- && dotfiles add scripts .zshrc'
 alias stfu=shutdown now
 alias term=~/scripts/safeterm.sh
 alias suspend='systemctl suspend'
@@ -101,3 +101,5 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+[ -f "/home/aglaia/.ghcup/env" ] && . "/home/aglaia/.ghcup/env" # ghcup-env

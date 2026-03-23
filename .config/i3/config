@@ -1,13 +1,13 @@
-# tokyonight
+# gruvboxmaterial
 
-set $offwhite #c0caf5
-set $bar_bg #161821
+set $offwhite #d4be98
+set $bar_bg #1d1e1f
 set $separator #666666
-set $focused #2B364D
-set $inactive #16161d
-set $active #294172
-set $urgent #FF757F
-set $urgent2 #C53B53
+set $focused #504945
+set $inactive #3c3836
+set $active #282828
+set $urgent #3c1f1e
+set $urgent2 #442e2d
 set $bmode #A07CBC
 
 #endcolors

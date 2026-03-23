@@ -54,7 +54,9 @@ newloc="$HOME/Documents/uni/obsidian-vault/attachments/"
 
 # handle duplicate names
 declare -i i=0
+BASE_INPUT="$input"
 while [ -e "$newloc$input.$extension" ]; do
+    input="$BASE_INPUT"
     i=$((i + 1))
     input="$input$i"
 done

@@ -12,5 +12,7 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
+vim.opt.clipboard = "unnamedplus"
+
 require("vim-options")
 require("lazy").setup("plugins") --plugin setup

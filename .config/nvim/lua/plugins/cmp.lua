@@ -9,7 +9,7 @@ return {
             'hrsh7th/cmp-buffer',
             'hrsh7th/cmp-path',
             'hrsh7th/cmp-cmdline',
-            --'hrsh7th/cmp-vsnip',
+            -- 'hrsh7th/cmp-vsnip',
             --'hrsh7th/vim-vsnip',
             'saadparwaiz1/cmp_luasnip',
             -- 'SirVer/ultisnips',
@@ -22,18 +22,62 @@ return {
         config = function()
             local cmp = require('cmp')
 
+            local kind_icons = {
+                Text = "󰉿",
+                Method = "󰆧",
+                Function = "󰊕",
+                Constructor = "",
+                Field = "󰜢",
+                Variable = "󰀫",
+                Class = "󰠱",
+                Interface = "",
+                Module = "",
+                Property = "󰜢",
+                Unit = "󰑭",
+                Value = "󰎠",
+                Enum = "",
+                Keyword = "󰌋",
+                Snippet = "",
+                Color = "󰏘",
+                File = "󰈙",
+                Reference = "󰈇",
+                Folder = "󰉋",
+                EnumMember = "",
+                Constant = "󰏿",
+                Struct = "󰙅",
+                Event = "",
+                Operator = "󰆕",
+                TypeParameter = "󰊄",
+            }
+
             cmp.setup({
                 snippet = {
                     expand = function(args)
-                        vim.fn["vsnip#anonymous"](args.body) -- For vsnip users.
-                        require('luasnip').lsp_expand(args.body) -- For luasnip users.
-
+                        require('luasnip').lsp_expand(args.body) -- Only use LuaSnip
                     end,
                 },
                 window = {
                     -- completion = cmp.config.window.bordered(),
                     -- documentation = cmp.config.window.bordered(),
                 },
+                
+                formatting = {
+                    fields = { "kind", "abbr", "menu" },
+                    format = function(entry, vim_item)
+                        -- Put the icon and the name of the kind together
+                        vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind] or "", vim_item.kind)
+                        
+                        -- Add a tag showing where the completion came from
+                        vim_item.menu = ({
+                            nvim_lsp = "[LSP]",
+                            luasnip = "[Snippet]",
+                            path = "[Path]",
+                        })[entry.source.name]
+                        
+                        return vim_item
+                    end,
+                },
+
                 mapping = cmp.mapping.preset.insert({
                     ['<C-b>'] = cmp.mapping.scroll_docs(-4),
                     ['<C-f>'] = cmp.mapping.scroll_docs(4),
@@ -64,15 +108,10 @@ return {
                     end, { "i", "s" }),
                 }),
                 sources = cmp.config.sources({
-                    { name = 'nvim_lsp' },
-                    { name = 'vsnip' },
-                    { name = 'luasnip' },
-                    -- { name = 'ultisnips' },
-                    -- { name = 'snippy' },
-                }, {
-                        { name = 'buffer' },
-                        {name = 'path'},
-                    }),
+                    { name = 'nvim_lsp', priority = 1000 }, 
+                    { name = 'luasnip',  priority = 750 },  
+                    { name = 'path',     priority = 500 },                  
+                })
             })
 
             -- Use buffer source for '/' and '?' in cmdline
@@ -93,19 +132,6 @@ return {
                     }),
                 matching = { disallow_symbol_nonprefix_matching = false },
             })
-
-            local capabilities = require("cmp_nvim_lsp").default_capabilities()
-
-            local servers = { "pyright", "clangd", "lua_ls" }
-            for _, server in ipairs(servers) do
-                vim.lsp.config(server, {
-                    capabilities = capabilities,
-                })
-            end
-
-            -- Enable them all in one go
-            vim.lsp.enable(servers)
-
         end,
     },
 }
