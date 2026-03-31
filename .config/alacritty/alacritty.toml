@@ -1,3 +1,6 @@
+[terminal.shell]
+program = "/usr/bin/zsh"
+
 [window]
 padding = { x = 10, y = 10 }
 decorations = "None"
