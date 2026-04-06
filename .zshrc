@@ -15,6 +15,13 @@ alias stfu=shutdown now
 alias term=~/scripts/safeterm.sh
 alias suspend='systemctl suspend'
 alias y=yazi
+alias yellow='redshift -P -O 3000'
+alias night='redshift -P -O 4000'
+alias day='redshift -x'
+# redshift -l 41.9:12.5 &
+
+alias idlesleep='echo s2idle | sudo tee /sys/power/mem_sleep && systemctl suspend'
+alias deepsleep='echo deep | sudo tee /sys/power/mem_sleep && systemctl suspend'
 
 # mkdir + cd
 mkcdir ()
@@ -101,5 +108,6 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
 
 [ -f "/home/aglaia/.ghcup/env" ] && . "/home/aglaia/.ghcup/env" # ghcup-env
