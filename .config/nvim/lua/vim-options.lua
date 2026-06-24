@@ -18,3 +18,16 @@ vim.opt.incsearch = true --highlighting for searches
 vim.opt.termguicolors = true
 
 vim.opt.scrolloff = 8 --never has less than 8 lines before end of page
+
+-- Better searching
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+
+-- Sync with system clipboard
+vim.opt.clipboard = "unnamedplus"
+
+-- Faster completion and responsiveness (default is 4000ms)
+vim.opt.updatetime = 250
+
+-- clear search highlights on pressing <Esc> in normal mode
+vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')

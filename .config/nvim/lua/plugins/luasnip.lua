@@ -6,6 +6,12 @@ return {
     config = function()
         local ls = require("luasnip")
 
+        ls.config.set_config({
+            enable_autosnippets = true,
+            history = true,
+            updateevents = "TextChanged,TextChangedI",
+        })
+
         -- Load VSCode-style snippets
         require("luasnip.loaders.from_vscode").lazy_load()
 
