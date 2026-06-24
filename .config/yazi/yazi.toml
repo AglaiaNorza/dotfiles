@@ -2,3 +2,6 @@
 [mgr]
 show_hidden = true
 show_symlink = true
+sort_by = "mtime"
+sort_reverse = true
+linemode = "mtime"

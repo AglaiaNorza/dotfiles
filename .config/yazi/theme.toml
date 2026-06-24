@@ -139,9 +139,9 @@ rules = [
   # Documents
   { mime = "application/{pdf,doc,rtf,vnd.*}", fg = "#689d6a" },
 
-  # Fallback
-  { name = "*", fg = "#ebdbb2" },
-  { name = "*/", fg = "#83a598" },
+# Fallback
+  { url = "*", fg = "#ebdbb2" },
+  { url = "*/", fg = "#83a598" },
 ]
 
 # : }}}
