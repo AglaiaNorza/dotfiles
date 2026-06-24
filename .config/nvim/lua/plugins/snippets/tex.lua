@@ -77,9 +77,9 @@ ls.add_snippets("tex", {
 
 ls.add_snippets("tex", {
     -- quantifiers with variable placeholders
-    s({ trig = "fa", snippetType = "autosnippet" }, fmt("\\forall {}, ", { i(1) }), { condition = in_mathzone }),
-    s({ trig = "ex", snippetType = "autosnippet" }, fmt("\\exists {}, ", { i(1) }), { condition = in_mathzone }),
-    s({ trig = "nex", snippetType = "autosnippet" }, fmt("\\nexists {}, ", { i(1) }), { condition = in_mathzone }),
+    s({ trig = "fa", snippetType = "autosnippet" }, fmt("\\forall {} ", { i(1) }), { condition = in_mathzone }),
+    s({ trig = "ex", snippetType = "autosnippet" }, fmt("\\exists {} ", { i(1) }), { condition = in_mathzone }),
+    s({ trig = "nex", snippetType = "autosnippet" }, fmt("\\nexists {} ", { i(1) }), { condition = in_mathzone }),
 
     -- turnstiles
     math_auto("ts", "\\vdash "),
@@ -113,8 +113,8 @@ ls.add_snippets("tex", {
 
 -- equations
 ls.add_snippets("tex", {
-    -- align
-    s("ali", fmt([[
+    -- align (autosnippet)
+    s({ trig = "ali", snippetType = "autosnippet" }, fmt([[
         \begin{{align*}}
             {} & {} \\\\
             {}
